@@ -478,10 +478,10 @@ img {
 	flex-direction: column;
 	gap: $spacing--md;
 
-	@include media(null, xs) {
+	@include media(null, sm) {
 		grid-column: 2 / -2;
 	}
-	@include media(xs) {
+	@include media(sm) {
 		grid-column: span 3;
 		box-sizing: border-box;
 	}
@@ -592,7 +592,7 @@ img {
 	gap: $spacing--md;
 }
 
-.form section {
+.form .form__field {
 	display: flex;
 	flex-direction: column;
 	gap: $spacing--xs;
