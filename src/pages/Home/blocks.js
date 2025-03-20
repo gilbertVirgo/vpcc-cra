@@ -23,11 +23,11 @@ export default [
 		],
 		images: [
 			{
-				src: "/assets/sundays-1.jpeg",
+				src: "/assets/images/sundays-1.jpeg",
 				alt: "A VPCC Sunday Service",
 			},
 			{
-				src: "/assets/sundays-2.jpeg",
+				src: "/assets/images/sundays-2.jpeg",
 				alt: "A VPCC Sunday Service",
 			},
 		],
@@ -44,7 +44,7 @@ export default [
 		buttons: [{ label: "Find out what’s on", href: "/whats-on" }],
 		images: [
 			{
-				src: "/assets/whatson.jpg",
+				src: "/assets/images/whatson.jpg",
 				alt: "VPCC members enjoying lunch together",
 			},
 		],
@@ -59,7 +59,7 @@ export default [
 			</p>
 		),
 		buttons: [{ label: "Find out more", href: "/about" }],
-		images: [{ src: "/assets/about.jpeg", alt: "The VPCC team" }],
+		images: [{ src: "/assets/images/about.jpeg", alt: "The VPCC team" }],
 	},
 	{
 		type: "feature",
@@ -71,7 +71,7 @@ export default [
 			</p>
 		),
 		buttons: [{ label: "Find out more", href: "/beliefs" }],
-		images: [{ src: "/assets/beliefs.jpg", alt: "" }],
+		images: [{ src: "/assets/images/beliefs.jpg", alt: "" }],
 	},
 	{
 		type: "feature",
@@ -85,7 +85,7 @@ export default [
 		buttons: [{ label: "Send us an email", href: "/connect" }],
 		images: [
 			{
-				src: "/assets/connect.jpeg",
+				src: "/assets/images/connect.jpeg",
 				alt: "",
 			},
 		],

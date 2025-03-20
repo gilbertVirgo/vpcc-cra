@@ -5,11 +5,11 @@ export default (block) => {
 	switch (block.type) {
 		case "feature":
 			return (
-				<section className="feature__wrapper">
+				<section className="feature__wrapper layout--grid">
 					{!!block.title ? (
-						<h2 className="feature__title hide--sm-up">
+						<h1 className="feature__title hide--sm-up">
 							{block.title}
-						</h2>
+						</h1>
 					) : (
 						""
 					)}
@@ -24,9 +24,9 @@ export default (block) => {
 
 					<section className="feature__text-content">
 						{!!block.title ? (
-							<h2 className="feature__title hide--sm-down">
+							<h1 className="feature__title hide--sm-down">
 								{block.title}
-							</h2>
+							</h1>
 						) : (
 							""
 						)}
@@ -47,6 +47,70 @@ export default (block) => {
 							""
 						)}
 					</section>
+				</section>
+			);
+		case "header":
+			return (
+				<header className="header__wrapper wrapper">
+					<div className="header__container container">
+						{!!block.title ? <h1>{block.title}</h1> : ""}
+						<hr className="header__divider" />
+						{!!block.body ? (
+							<div className="header__body">{block.body}</div>
+						) : (
+							""
+						)}
+					</div>
+				</header>
+			);
+		case "content-grid":
+			return (
+				<section className="content-grid__wrapper wrapper">
+					<div className="content-grid__container container">
+						{!!block.title ? (
+							<h1 className="content-grid__title">
+								{block.title}
+							</h1>
+						) : (
+							""
+						)}
+						{!!block.body ? <p>{block.body}</p> : ""}
+						<div className="content-grid__cells layout--grid">
+							{!!block.cells && block.cells.length > 0
+								? block.cells.map((cell, index) => {
+										return (
+											<article
+												className="content-grid__cell"
+												key={`content-cell-${index}`}
+											>
+												{!!cell.title &&
+													!!cell.subtitle && (
+														<div className="content-grid__cell__title">
+															{!!cell.title ? (
+																<h3>
+																	{cell.title}
+																</h3>
+															) : (
+																""
+															)}
+															{!!cell.subtitle ? (
+																<h4>
+																	{
+																		cell.subtitle
+																	}
+																</h4>
+															) : (
+																""
+															)}
+														</div>
+													)}
+												{!!cell.body ? cell.body : ""}
+											</article>
+										);
+								  })
+								: ""}
+						</div>
+					</div>
 				</section>
 			);
 		default:

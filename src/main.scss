@@ -4,38 +4,38 @@
 $golden-ratio: 1.618;
 
 /* Spacing variables */
-$spacing__md: 1rem;
-$spacing__xxxs: calc(
-	$spacing__md / $golden-ratio / $golden-ratio / $golden-ratio / $golden-ratio
+$spacing--md: 1rem;
+$spacing--xxxs: calc(
+	$spacing--md / $golden-ratio / $golden-ratio / $golden-ratio / $golden-ratio
 );
-$spacing__xxs: calc(
-	$spacing__md / $golden-ratio / $golden-ratio / $golden-ratio
+$spacing--xxs: calc(
+	$spacing--md / $golden-ratio / $golden-ratio / $golden-ratio
 );
-$spacing__xs: calc($spacing__md / $golden-ratio / $golden-ratio);
-$spacing__sm: calc($spacing__md / $golden-ratio);
-$spacing__lg: calc($spacing__md * $golden-ratio);
-$spacing__xl: calc($spacing__md * $golden-ratio * $golden-ratio);
-$spacing__xxl: calc(
-	$spacing__md * $golden-ratio * $golden-ratio * $golden-ratio
+$spacing--xs: calc($spacing--md / $golden-ratio / $golden-ratio);
+$spacing--sm: calc($spacing--md / $golden-ratio);
+$spacing--lg: calc($spacing--md * $golden-ratio);
+$spacing--xl: calc($spacing--md * $golden-ratio * $golden-ratio);
+$spacing--xxl: calc(
+	$spacing--md * $golden-ratio * $golden-ratio * $golden-ratio
 );
 
 /* Breakpoint variables */
-$breakpoint-xs: 480px;
-$breakpoint-sm: 768px;
-$breakpoint-md: 1024px;
-$breakpoint-lg: 1200px;
-$breakpoint-xl: 1440px;
+$breakpoint-xs: 400px;
+$breakpoint-sm: 700px;
+$breakpoint-md: 1100px;
+$breakpoint-lg: 1350px;
+$breakpoint-xl: 1500px;
 
 /* Color variables */
-$color-darkest: #212529;
-$color-darker: #343a40;
-$color-dark: #495057;
-$color-medium-dark: #6c757d;
-$color-neutral: #adb5bd;
-$color-medium-light: #ced4da;
-$color-light: #dee2e6;
-$color-lighter: #e9ecef;
-$color-lightest: #f8f9fa;
+$color--darkest: #212529;
+$color--darker: #343a40;
+$color--dark: #495057;
+$color--medium-dark: #6c757d;
+$color--neutral: #adb5bd;
+$color--medium-light: #ced4da;
+$color--light: #dee2e6;
+$color--lighter: #e9ecef;
+$color--lightest: #f8f9fa;
 
 /* Mixin for flexible media queries */
 @mixin media($min: null, $max: null) {
@@ -182,18 +182,20 @@ $color-lightest: #f8f9fa;
 	font: unset;
 	font-family: "Outfit", sans-serif;
 	appearance: none;
-	color: $color-dark;
+	background-color: unset;
+	color: $color--dark;
 	border: none;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	text-decoration: none;
+	list-style-type: none;
 
-	@include media(null, sm) {
+	@include media(null, xs) {
 		font-size: 16px;
 	}
 
-	@include media(sm) {
+	@include media(xs) {
 		font-size: 17.3px;
 	}
 }
@@ -203,74 +205,110 @@ body {
 	flex-direction: column;
 	align-items: center;
 	min-height: 100vh;
-	background-color: $color-lightest;
+	background-color: $color--lightest;
+
+	@include media(null, sm) {
+		gap: $spacing--lg;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .container {
 	width: 100%;
 
-	@include media(null, sm) {
-		row-gap: $spacing__xl;
-		width: calc(100% - ($spacing__md));
+	@include media(null, xs) {
+		row-gap: $spacing--xl;
 	}
 
-	@include media(sm) {
+	@include media(xs) {
 		max-width: $breakpoint-xl;
 	}
 }
 
 main {
-	@extend .container;
-
 	display: flex;
 	flex-direction: column;
+
+	@include media(null, sm) {
+		row-gap: $spacing--xl;
+	}
+}
+
+h1 {
+	font-size: $spacing--xl;
+	font-weight: 500;
+	// margin: -0.5rem 0 -0.5rem;
+	line-height: 100%;
 }
 
 h2 {
-	font-size: $spacing__xl;
+	font-size: $spacing--lg;
 	font-weight: 500;
 }
 
-p {
-	font-size: $spacing__md;
+h3 {
+	font-size: calc(($spacing--lg + $spacing--md) / 2);
+	font-weight: 500;
+}
+
+h4 {
+	color: $color--medium-dark;
+}
+
+h4,
+.form label {
+	font-size: calc(($spacing--md + $spacing--sm) / 2);
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+}
+
+p,
+li {
+	font-size: $spacing--md;
 	font-weight: 300;
 	line-height: 140%;
 }
 
+p a {
+	text-decoration: underline;
+}
+
 img {
 	display: block;
-	aspect-ratio: 16 / 9;
-	width: 100%;
-	object-fit: cover;
 }
 
-.button__wrapper {
-	display: flex;
-	width: 100%;
-	padding: $spacing__xs $spacing__md;
-	justify-content: space-between;
-	background-color: white;
-	border-radius: $spacing__md;
-	border: 1px solid $color-neutral;
-	cursor: pointer;
-}
-
-.layout__grid {
+.layout--grid {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 }
 
 .feature__wrapper {
-	@extend .layout__grid;
+	img {
+		aspect-ratio: 16 / 9;
+		width: 100%;
+		object-fit: cover;
+	}
 
-	@include media(null, md) {
+	@include media(sm, md) {
+		img {
+			aspect-ratio: 1 / 1;
+		}
+	}
+
+	@include media(null, sm) {
 		grid-template-areas:
 			". title title title title title title title title title title ."
 			"image image image image image image image image image image image image"
 			". text-content text-content text-content text-content text-content text-content text-content text-content text-content text-content .";
 
-		row-gap: $spacing__sm;
+		row-gap: $spacing--sm;
 
 		> .feature__title {
 			grid-area: title;
@@ -283,7 +321,7 @@ img {
 		}
 	}
 
-	@include media(md) {
+	@include media(sm) {
 		&:nth-of-type(odd) {
 			grid-template-areas: ". text-content text-content text-content text-content . image image image image image image";
 		}
@@ -291,7 +329,7 @@ img {
 			grid-template-areas: "image image image image image image . text-content text-content text-content text-content .";
 		}
 
-		row-gap: $spacing__lg;
+		row-gap: $spacing--lg;
 		flex-direction: column;
 
 		.feature__text-content {
@@ -306,52 +344,312 @@ img {
 .feature__text-content {
 	display: flex;
 	flex-direction: column;
-	gap: $spacing__lg;
 	justify-content: center;
+
+	@include media(null, sm) {
+		gap: $spacing--md;
+	}
+
+	@include media(sm) {
+		gap: $spacing--lg;
+	}
 }
 
 .feature__button-group {
 	display: flex;
 	flex-direction: column;
-	gap: $spacing__sm;
+	gap: $spacing--sm;
 }
 
 .navigation-bar__wrapper {
 	position: sticky;
 	top: 0;
 	left: 0;
-	width: 100%;
 	background: linear-gradient(
 		to bottom,
-		$color-lightest,
-		rgba(248, 249, 250, 0)
+		$color--lightest,
+		#{$color--lightest}00
 	);
 	z-index: 2;
-	display: flex;
-	justify-content: center;
-	padding: $spacing__xs;
+	padding: $spacing--xs;
 	box-sizing: border-box;
+
+	&:not(.open) {
+		.menu-toggle--close {
+			display: none;
+		}
+		.navigation-bar__links {
+			@include media(null, sm) {
+				display: none;
+			}
+		}
+	}
+
+	&.open {
+		.menu-toggle--open {
+			display: none;
+		}
+
+		@include media(null, sm) {
+			height: 100dvh;
+			background-color: $color--lightest;
+		}
+	}
 }
 
 .navigation-bar__container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 	align-items: center;
+
+	@include media(null, sm) {
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		grid-template-rows: min-content;
+		gap: $spacing--md;
+	}
+
+	@include media(sm) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }
 
-.navigation-bar__logo {
-	width: $spacing__xxl;
-	height: $spacing__xxl;
+.navigation-bar__logo,
+.navigation-bar__menu-toggle {
+	position: relative;
+
+	width: $spacing--xxl;
+	height: $spacing--xxl;
+}
+
+.navigation-bar__logo img {
+	width: 100%;
+	height: 100%;
+}
+
+.navigation-bar__menu-toggle {
+	img {
+		width: 100%;
+	}
+
+	@include media(sm) {
+		display: none;
+	}
 }
 
 .navigation-bar__links {
 	display: flex;
-	flex-direction: row;
-	gap: $spacing__md;
+	gap: $spacing--md;
+
+	@include media(null, sm) {
+		grid-column: 1 / -1;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+	}
+
+	@include media(sm) {
+		flex-direction: row;
+	}
 }
 
 .navigation-bar__link {
-	font-size: $spacing__md;
+	// font-size: $spacing--md;
 	font-weight: 500;
+
+	@include media(null, sm) {
+		a {
+			font-size: $spacing--lg;
+		}
+	}
+}
+
+.footer__wrapper {
+	background-color: $color--darkest;
+	padding: $spacing--lg $spacing--xs;
+
+	* {
+		color: $color--lightest;
+	}
+}
+
+.footer__section__wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing--md;
+
+	@include media(null, xs) {
+		grid-column: 2 / -2;
+	}
+	@include media(xs) {
+		grid-column: span 3;
+		box-sizing: border-box;
+	}
+}
+
+.footer__section__links {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing--xs;
+}
+
+.footer__section__link {
+	display: flex;
+	gap: $spacing--xxs;
+	align-items: center;
+
+	.icon {
+		width: $spacing--lg;
+		height: $spacing--lg;
+		object-fit: cover;
+	}
+}
+
+.header__container {
+	display: flex;
+	gap: $spacing--md;
+
+	@include media(null, sm) {
+		flex-direction: column;
+	}
+
+	@include media(sm) {
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+.header__divider {
+	height: 1px;
+	background-color: $color--neutral;
+	flex-grow: 1;
+}
+
+.header__body {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing--xs;
+
+	@include media(sm, md) {
+		width: 50%;
+	}
+
+	@include media(md) {
+		width: 40%;
+	}
+}
+
+.content-grid__container {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing--md;
+}
+
+.content-grid__cells {
+	gap: $spacing--sm;
+}
+
+.content-grid__cell {
+	background-color: white;
+	border: 1px solid $color--neutral;
+	border-radius: $spacing--sm;
+	padding: $spacing--sm;
+	display: flex;
+	flex-direction: column;
+	gap: $spacing--sm;
+
+	@include media(null, sm) {
+		grid-column: 1 / -1;
+	}
+
+	@include media(sm) {
+		grid-column: span 4;
+	}
+}
+
+.content-grid__cell__title {
+	display: flex;
+	flex-direction: column;
+}
+
+.page__about,
+.page__beliefs,
+.page__connect {
+	gap: $spacing--xl;
+
+	@include media(null, sm) {
+		padding: 0 $spacing--xs;
+	}
+
+	@include media(sm) {
+		padding: $spacing--xl $spacing--xs;
+	}
+}
+
+.form .form__input-group {
+	display: flex;
+	width: 100%;
+	gap: $spacing--md;
+}
+
+.form section {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing--xs;
+	width: 100%;
+}
+
+.button__wrapper,
+.form input,
+.form textarea {
+	display: flex;
+	width: 100%;
+	padding: $spacing--xs $spacing--md;
+	background-color: white;
+	border: 1px solid $color--neutral;
+	border-radius: $spacing--md;
+}
+
+.form textarea {
+	resize: none;
+	height: $spacing--xxl;
+}
+
+.button__wrapper {
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+
+.connect__form {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing--md;
+
+	@include media(null, sm) {
+		grid-column: 1 / -1;
+	}
+
+	@include media(sm) {
+		grid-column: 1 / 7;
+	}
+}
+
+.connect__container {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing--lg;
+
+	.layout--grid img {
+		@include media(null, sm) {
+			display: none;
+		}
+
+		@include media(sm) {
+			grid-column: 8 / -1;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
 }
