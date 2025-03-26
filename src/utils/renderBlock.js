@@ -37,8 +37,13 @@ export default (block) => {
 						)}
 						{!!block.buttons && block.buttons.length > 0 ? (
 							<div className="feature__button-group">
-								{block.buttons.map((button) => (
-									<Button href={button.href}>
+								{block.buttons.map((button, index) => (
+									<Button
+										key={`feature-button-${index}`}
+										onClick={button.onClick}
+										href={button.href}
+										target={button.target}
+									>
 										{button.label}
 									</Button>
 								))}

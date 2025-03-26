@@ -16,7 +16,7 @@ export default [
 		),
 		images: [
 			{
-				src: "/assets/images/sundays-2.jpeg",
+				src: "/assets/images/prayer-meeting.jpeg",
 				alt: "A VPCC Prayer Meeting",
 			},
 		],
@@ -45,11 +45,7 @@ export default [
 		],
 		images: [
 			{
-				src: "/assets/images/sundays-1.jpeg",
-				alt: "A VPCC Sunday Service",
-			},
-			{
-				src: "/assets/images/sundays-2.jpeg",
+				src: "/assets/images/sundays-4.jpeg",
 				alt: "A VPCC Sunday Service",
 			},
 		],
@@ -74,7 +70,7 @@ export default [
 		],
 		images: [
 			{
-				src: "/assets/images/whatson.jpg",
+				src: "/assets/images/whatson.jpeg",
 				alt: "A VPCC Sunday Service",
 			},
 		],

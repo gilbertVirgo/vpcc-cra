@@ -1,4 +1,4 @@
-import renderBlock from "../../helpers/renderBlock";
+import renderBlock from "../../utils/renderBlock";
 import blocks from "./blocks";
 
 const About = () => {

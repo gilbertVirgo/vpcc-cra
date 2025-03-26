@@ -1,5 +1,5 @@
 import blocks from "./blocks";
-import renderBlock from "../../helpers/renderBlock";
+import renderBlock from "../../utils/renderBlock";
 
 const Beliefs = () => {
 	return blocks.map(renderBlock);

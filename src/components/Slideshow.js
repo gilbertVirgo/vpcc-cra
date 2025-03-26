@@ -1,5 +1,7 @@
 import React from "react";
 
+const FRAME_LENGTH = 1500;
+
 export default ({ images }) => {
 	let [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 	let [componentIsMounted, setComponentIsMounted] = React.useState(false); // eslint-disable-line no-unused-vars
@@ -19,7 +21,7 @@ export default ({ images }) => {
 						(currentImageIndex) =>
 							(currentImageIndex + 1) % images.length
 					),
-				2000
+				FRAME_LENGTH
 			);
 		}
 	}, [componentIsMounted, currentImageIndex]);

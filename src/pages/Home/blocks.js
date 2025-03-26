@@ -1,4 +1,4 @@
-export default [
+export default (showSMSReminderModal) => [
 	{
 		type: "feature",
 		title: "Sundays",
@@ -15,10 +15,11 @@ export default [
 			{
 				label: "Get directions",
 				href: "https://maps.google.com",
+				target: "_blank",
 			},
 			{
 				label: "Send me a reminder text",
-				href: "/sms-reminder",
+				onClick: showSMSReminderModal,
 			},
 		],
 		images: [
@@ -28,6 +29,14 @@ export default [
 			},
 			{
 				src: "/assets/images/sundays-2.jpeg",
+				alt: "A VPCC Sunday Service",
+			},
+			{
+				src: "/assets/images/sundays-3.jpeg",
+				alt: "A VPCC Sunday Service",
+			},
+			{
+				src: "/assets/images/sundays-4.jpeg",
 				alt: "A VPCC Sunday Service",
 			},
 		],
@@ -44,7 +53,7 @@ export default [
 		buttons: [{ label: "Find out what’s on", href: "/whats-on" }],
 		images: [
 			{
-				src: "/assets/images/whatson.jpg",
+				src: "/assets/images/whatson.jpeg",
 				alt: "VPCC members enjoying lunch together",
 			},
 		],

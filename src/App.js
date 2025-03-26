@@ -10,6 +10,7 @@ import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
 
 import { useLocation } from "react-router-dom";
+import SMSReminderModal from "./components/SMSReminderModal";
 
 function App() {
 	let location = useLocation();
@@ -17,6 +18,7 @@ function App() {
 	return (
 		<>
 			<NavigationBar />
+			<SMSReminderModal />
 			<main
 				className={`container page__${
 					location.pathname === "/"
