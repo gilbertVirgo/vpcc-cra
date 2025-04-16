@@ -184,7 +184,7 @@ const Connect = () => {
 						</Button>
 					</form>
 					<img
-						src="/assets/images/connect.jpeg"
+						src="/assets/images/connect_filtered.jpeg"
 						alt="People connecting at a community event"
 						aria-hidden="false"
 					/>

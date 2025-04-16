@@ -18,7 +18,7 @@ export default (showModal) => [
 		),
 		images: [
 			{
-				src: "/assets/images/hot-cross-buns.jpg",
+				src: "/assets/images/hot-cross-buns_filtered.jpg",
 				alt: "Hot cross buns",
 			},
 		],
@@ -64,7 +64,7 @@ export default (showModal) => [
 		),
 		images: [
 			{
-				src: "/assets/images/prayer-meeting.jpeg",
+				src: "/assets/images/prayer-meeting_filtered.jpeg",
 				alt: "A VPCC Prayer Meeting",
 			},
 		],
@@ -93,7 +93,7 @@ export default (showModal) => [
 		],
 		images: [
 			{
-				src: "/assets/images/sundays-4.jpeg",
+				src: "/assets/images/sundays-4_filtered.jpeg",
 				alt: "A VPCC Sunday Service",
 			},
 		],
@@ -118,7 +118,7 @@ export default (showModal) => [
 		],
 		images: [
 			{
-				src: "/assets/images/whatson.jpeg",
+				src: "/assets/images/whatson_filtered.jpeg",
 				alt: "A VPCC Sunday Service",
 			},
 		],
@@ -141,7 +141,7 @@ export default (showModal) => [
 		],
 		images: [
 			{
-				src: "/assets/images/connect.jpeg",
+				src: "/assets/images/connect_filtered.jpeg",
 				alt: "A VPCC Sunday Service",
 			},
 		],

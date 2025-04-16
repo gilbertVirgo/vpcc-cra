@@ -303,7 +303,7 @@ img {
 
 	@include media(sm, md) {
 		.feature__image-slideshow > img {
-			object-position: left;
+			object-position: center;
 			aspect-ratio: 1 / 1;
 		}
 	}

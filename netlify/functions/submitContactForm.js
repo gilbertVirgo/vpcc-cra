@@ -3,7 +3,14 @@ import send from "gmail-send";
 
 export async function handler(event) {
 	try {
+		console.log("Received event:", event);
+
+		// Log the event body before parsing
+		console.log("Event Body:", event.body);
+
 		const { token, formData } = JSON.parse(event.body);
+		console.log("Parsed token:", token);
+		console.log("Parsed formData:", formData);
 
 		// Verify reCAPTCHA token
 		const recaptchaResponse = await fetch(
@@ -17,9 +24,13 @@ export async function handler(event) {
 			}
 		);
 
+		console.log("reCAPTCHA response status:", recaptchaResponse.status);
+
 		const recaptchaResult = await recaptchaResponse.json();
+		console.log("reCAPTCHA result:", recaptchaResult);
 
 		if (!recaptchaResult.success) {
+			console.log("reCAPTCHA verification failed");
 			return {
 				statusCode: 400,
 				body: JSON.stringify({
@@ -36,6 +47,7 @@ export async function handler(event) {
       <p><strong>Email:</strong> ${formData.email}</p>
       <p><strong>Message:</strong> ${formData.message}</p>
     `;
+		console.log("Email content prepared");
 
 		// Send email
 		const sendEmail = send({
@@ -50,11 +62,14 @@ export async function handler(event) {
 			from: "noreply@vpcc.church",
 		});
 
+		console.log("Email sent successfully");
+
 		return {
 			statusCode: 200,
 			body: JSON.stringify({ message: "Email sent successfully" }),
 		};
 	} catch (error) {
+		console.error("Error occurred:", error.message);
 		return {
 			statusCode: 500,
 			body: JSON.stringify({
