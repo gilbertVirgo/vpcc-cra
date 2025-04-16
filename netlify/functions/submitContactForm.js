@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import send from "gmail-send";
 
-export async function handler(event, context) {
+export async function handler(event) {
 	try {
 		const { token, formData } = JSON.parse(event.body);
 
