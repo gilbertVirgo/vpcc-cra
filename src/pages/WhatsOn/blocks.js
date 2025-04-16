@@ -1,4 +1,52 @@
-export default [
+import SMSReminderModal from "../../components/SMSReminderModal";
+
+export default (showModal) => [
+	{
+		type: "feature",
+		title: "Hot Cross Buns",
+		body: (
+			<>
+				<p>
+					Every year, a team of VPCC volunteers bake, ice and glaze
+					over 200 hot cross buns for the enjoyment of the community.
+					Why not join us for the festive feast on Good Friday?
+				</p>
+				<p>⸻</p>
+				<p>17 Lark Row, E2 9JA</p>
+				<p>11am-2pm • 18/04/25</p>
+			</>
+		),
+		images: [
+			{
+				src: "/assets/images/hot-cross-buns.jpg",
+				alt: "Hot cross buns",
+			},
+		],
+		timeout: new Date("2025-04-18T15:00"),
+	},
+	{
+		type: "feature",
+		title: "Egg Hunt",
+		body: (
+			<>
+				<p>
+					Who doesn't love an egg hunt? On Easter Saturday, we&apos;ll
+					be heading out to Victoria Park to find some hidden
+					chocolate eggs. All parents and kids welcome!
+				</p>
+				<p>⸻</p>
+				<p>2-3pm • 19/04/25</p>
+			</>
+		),
+		images: [
+			{
+				src: "/assets/images/egg-hunt-map.svg",
+				alt: "An egg hunt",
+			},
+		],
+		imageEnlargeable: true,
+		timeout: new Date("2025-04-19T15:00"),
+	},
 	{
 		type: "feature",
 		title: "Prayer meetings",
@@ -38,10 +86,10 @@ export default [
 				label: "Get directions",
 				href: "https://maps.google.com",
 			},
-			{
-				label: "Send me a reminder text",
-				href: "/sms-reminder",
-			},
+			// {
+			// 	label: "Send me a reminder text",
+			// 	onClick: showModal(<SMSReminderModal/>),
+			// },
 		],
 		images: [
 			{

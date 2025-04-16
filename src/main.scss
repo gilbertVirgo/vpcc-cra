@@ -183,7 +183,7 @@ $color--lightest: #f8f9fa;
 	font-family: "Outfit", sans-serif;
 	appearance: none;
 	background-color: unset;
-	color: $color--dark;
+	color: $color--darker;
 	border: none;
 	margin: 0;
 	padding: 0;
@@ -297,8 +297,13 @@ img {
 		object-fit: cover;
 	}
 
+	.feature__image--enlarged {
+		display: none;
+	}
+
 	@include media(sm, md) {
-		img {
+		.feature__image-slideshow > img {
+			object-position: left;
 			aspect-ratio: 1 / 1;
 		}
 	}
@@ -338,6 +343,20 @@ img {
 		}
 		.feature__image-slideshow {
 			grid-area: image;
+
+			&.enlargeable:has(.hidden) {
+				cursor: zoom-in;
+			}
+		}
+
+		.feature__image--enlarged:not(.hidden) {
+			display: flex;
+			align-items: center;
+
+			img {
+				max-height: calc(100vh - $spacing--xl);
+				max-width: calc(100vw - $spacing--xl);
+			}
 		}
 	}
 }
@@ -354,6 +373,12 @@ img {
 	@include media(sm) {
 		gap: $spacing--lg;
 	}
+}
+
+.feature__body {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing--xs;
 }
 
 .feature__button-group {
@@ -686,6 +711,10 @@ img {
 	width: 100%;
 	max-width: $breakpoint-sm;
 	position: relative;
+
+	h3 {
+		padding-right: $spacing--lg;
+	}
 }
 
 .modal__close {

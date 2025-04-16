@@ -2,6 +2,11 @@ import Button from "../components/Button";
 import Slideshow from "../components/Slideshow";
 
 export default (block) => {
+	// If current date is beyond block.timeout, return null.
+	if (block.timeout && new Date() >= block.timeout) {
+		return null;
+	}
+
 	switch (block.type) {
 		case "feature":
 			return (
@@ -15,8 +20,27 @@ export default (block) => {
 					)}
 
 					{!!block.images && block.images.length > 0 ? (
-						<div className="feature__image-slideshow">
+						<div
+							onClick={(e) => {
+								if (!block.imageEnlargeable) return;
+
+								e.target
+									.closest(".feature__image-slideshow")
+									.querySelector(".feature__image--enlarged")
+									.classList.toggle("hidden");
+							}}
+							className={`feature__image-slideshow ${
+								block.imageEnlargeable ? "enlargeable" : ""
+							}`}
+						>
 							<Slideshow images={block.images} />
+							{block.imageEnlargeable ? (
+								<div className="feature__image--enlarged modal__overlay  hidden">
+									<img src={block.images[0].src} />
+								</div>
+							) : (
+								""
+							)}
 						</div>
 					) : (
 						""

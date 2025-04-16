@@ -4,12 +4,15 @@ import "./main.scss";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { ModalProvider } from "./components/ModalContext";
+import { ReCaptchaProvider } from "./components/ReCaptchaContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<BrowserRouter>
-		<ModalProvider>
-			<App />
-		</ModalProvider>
+		<ReCaptchaProvider siteKey="6Lfj0AErAAAAAB7JNpv769gtyadOHtYtG9RlXpJF">
+			<ModalProvider>
+				<App />
+			</ModalProvider>
+		</ReCaptchaProvider>
 	</BrowserRouter>
 );

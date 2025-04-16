@@ -1,13 +1,47 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Button from "../../components/Button";
+import ReCaptchaContext from "../../components/ReCaptchaContext";
+
+import { useNavigate } from "react-router-dom";
+
+import ModalContext from "../../components/ModalContext";
+
+let SuccessModal = () => (
+	<div className="mini-container">
+		<h3>Success</h3>
+		<p>
+			Thank you for getting in touch. We&apos;ll get back to you as soon
+			as possible.
+		</p>
+	</div>
+);
+
+let ErrorModal = () => (
+	<div className="mini-container">
+		<h3>Error</h3>
+		<p>
+			It looks like something&apos;s gone wrong and your message
+			hasn&apos;t been sent.
+		</p>
+		<p>
+			Please try again later or contact us directly on{" "}
+			<a href="mailto:gil@vpcc.church">gil@vpcc.church</a>.
+		</p>
+	</div>
+);
 
 const Connect = () => {
+	let navigate = useNavigate();
+	const { showModal } = useContext(ModalContext);
+
 	const [formData, setFormData] = useState({
 		firstName: "",
 		lastName: "",
 		email: "",
 		message: "",
 	});
+
+	const { executeRecaptcha } = useContext(ReCaptchaContext);
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -17,10 +51,35 @@ const Connect = () => {
 		}));
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		// Form submission logic here
-		console.log("Form submitted:", formData);
+		const token = await executeRecaptcha("contact_form");
+		if (token) {
+			try {
+				const response = await fetch(
+					"/.netlify/functions/submitContactForm",
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+						},
+						body: JSON.stringify({ token, formData }),
+					}
+				);
+
+				const result = await response.json();
+				if (response.ok) {
+					console.log("Email sent successfully:", result);
+					showModal(<SuccessModal />);
+				} else {
+					showModal(<ErrorModal />);
+				}
+			} catch (error) {
+				console.error(error);
+				showModal(<ErrorModal />);
+			}
+			navigate("/");
+		}
 	};
 
 	return (
@@ -29,6 +88,7 @@ const Connect = () => {
 				<h1 id="connect-heading">Connect with us</h1>
 				<div className="layout--grid">
 					<form
+						method="POST"
 						className="connect__form form"
 						onSubmit={handleSubmit}
 						aria-labelledby="connect-heading"
@@ -133,5 +193,7 @@ const Connect = () => {
 		</main>
 	);
 };
+
+// This works! Just need to add 'success' and 'error' pages.
 
 export default Connect;
