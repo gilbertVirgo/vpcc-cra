@@ -135,7 +135,8 @@ export default (showModal) => [
 		),
 		buttons: [
 			{
-				label: "Apply for Life Skills training",
+				label: "Get in touch",
+				href: "/connect",
 			},
 		],
 		images: [
