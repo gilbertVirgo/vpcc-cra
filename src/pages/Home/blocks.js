@@ -62,7 +62,7 @@ export default (showModal) => [
 		buttons: [
 			{
 				label: "Get directions",
-				href: "https://maps.google.com",
+				href: "https://maps.app.goo.gl/CQFsTYqZfuUAEvuP7",
 				target: "_blank",
 			},
 			// {
