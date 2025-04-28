@@ -118,7 +118,7 @@ export default (showModal) => [
 		],
 		images: [
 			{
-				src: "/assets/images/whatson_filtered.jpeg",
+				src: "/assets/images/beliefs_filtered.JPG",
 				alt: "A VPCC Sunday Service",
 			},
 		],
