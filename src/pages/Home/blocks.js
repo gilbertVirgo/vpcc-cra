@@ -93,7 +93,7 @@ export default (showModal) => [
 		buttons: [{ label: "Find out what’s on", href: "/whats-on" }],
 		images: [
 			{
-				src: "/assets/images/whatson_filtered.jpeg",
+				src: "/assets/images/prayer-meeting_filtered.jpeg",
 				alt: "VPCC members enjoying lunch together",
 			},
 		],
