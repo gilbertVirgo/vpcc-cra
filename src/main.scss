@@ -37,6 +37,9 @@ $color--light: #dee2e6;
 $color--lighter: #e9ecef;
 $color--lightest: #f8f9fa;
 
+$color--orange: #ff9035;
+$color--eggshell: #fcfcf5;
+
 /* Mixin for flexible media queries */
 @mixin media($min: null, $max: null) {
 	$min-width: null;
@@ -205,7 +208,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	min-height: 100vh;
-	background-color: $color--lightest;
+	background-color: $color--eggshell;
 
 	@include media(null, sm) {
 		gap: $spacing--lg;
@@ -238,6 +241,22 @@ body {
 	flex-direction: column;
 	width: 100%;
 	row-gap: $spacing--sm;
+}
+
+a:hover {
+	text-decoration: underline;
+	text-decoration-color: $color--orange;
+	text-decoration-thickness: 2px;
+
+	&.button__wrapper {
+		text-decoration: none;
+	}
+}
+
+p a {
+	color: $color--orange;
+	font-weight: 600;
+	text-decoration: none;
 }
 
 h1 {
@@ -274,10 +293,6 @@ li {
 	font-size: $spacing--md;
 	font-weight: 300;
 	line-height: 140%;
-}
-
-p a {
-	text-decoration: underline;
 }
 
 img {
@@ -393,8 +408,8 @@ img {
 	left: 0;
 	background: linear-gradient(
 		to bottom,
-		$color--lightest,
-		#{$color--lightest}00
+		$color--eggshell,
+		#{$color--eggshell}00
 	);
 	z-index: 2;
 	padding: $spacing--xs;
@@ -418,7 +433,7 @@ img {
 
 		@include media(null, sm) {
 			height: 100dvh;
-			background-color: $color--lightest;
+			background-color: $color--eggshell;
 		}
 	}
 }
@@ -495,7 +510,7 @@ img {
 	padding: $spacing--lg $spacing--xs;
 
 	* {
-		color: $color--lightest;
+		color: $color--eggshell;
 	}
 }
 
@@ -576,7 +591,7 @@ img {
 }
 
 .content-grid__cell {
-	background-color: white;
+	background-color: $color--eggshell;
 	border: 1px solid $color--neutral;
 	border-radius: $spacing--sm;
 	padding: $spacing--sm;
@@ -644,7 +659,7 @@ img {
 	display: flex;
 	width: 100%;
 	padding: $spacing--xs $spacing--md;
-	background-color: white;
+	background-color: $color--eggshell;
 	border: 1px solid $color--neutral;
 	border-radius: $spacing--md;
 }
@@ -658,6 +673,7 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
+	border: 2px solid $color--orange;
 }
 
 .connect__form {
@@ -703,7 +719,7 @@ img {
 }
 
 .modal__container {
-	background-color: $color--lightest;
+	background-color: $color--eggshell;
 	padding: $spacing--md;
 	box-sizing: border-box;
 	border-radius: $spacing--md;

@@ -5,18 +5,15 @@ export default [
 		body: (
 			<>
 				<p>
-					In 2010, captivated by a vision for bringing gospel light
-					into the thick darkness of Tower Hamlets, Ben Virgo and a
-					small nucleus of family and friends began to meet on
-					Sundays.
+					In 2010, captivated by a vision for bringing the gospel to
+					Tower Hamlets, Ben Virgo and a small nucleus of family and
+					friends began to meet on Sundays.
 				</p>
 				<p>
 					For about a decade, the church plant met in Ben and Rachel’s
-					family home. Growth was painfully slow but things began to
-					pick up shortly after COVID. One week, the kitchen was so
-					full that there was only standing room. That week, in God’s
-					sovereign kindness, a door was opened to meet in a local
-					hall.
+					family home. One week, the kitchen was so full that there
+					was only standing room. That week, in God’s sovereign
+					kindness, a door was opened to meet in a local hall.
 				</p>
 				<p>
 					Today, VPCC meets a stone’s throw away from Victoria Park—a
@@ -33,7 +30,7 @@ export default [
 		cells: [
 			{
 				title: "Ben Virgo",
-				subtitle: "Pastor",
+				subtitle: "Lead Pastor",
 				body: (
 					<p>
 						Ben is married to Rachel and they have had seven
@@ -45,7 +42,7 @@ export default [
 			},
 			{
 				title: "Gil Virgo",
-				subtitle: "Elder",
+				subtitle: "Pastor",
 				body: (
 					<p>
 						Gil is married to Lucy. They live together with their
