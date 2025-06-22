@@ -3,49 +3,32 @@ import SMSReminderModal from "../../components/SMSReminderModal";
 export default (showModal) => [
 	{
 		type: "feature",
-		title: "Hot Cross Buns",
+		title: "This Week: Community Games",
 		body: (
 			<>
 				<p>
-					Every year, a team of VPCC volunteers bake, ice and glaze
-					over 200 hot cross buns for the enjoyment of the community.
-					Why not join us for the festive feast on Good Friday?
+					Join us this Wednesday for fun, games and snacks on the
+					Wellington estate.
 				</p>
 				<p>⸻</p>
-				<p>17 Lark Row, E2 9JA</p>
-				<p>11am-2pm • 18/04/25</p>
+				<p>6:30-8pm • Wednesday 22 June, 2025</p>
 			</>
 		),
-		images: [
+		buttons: [
 			{
-				src: "/assets/images/hot-cross-buns_filtered.jpg",
-				alt: "Hot cross buns",
+				label: "Get directions",
+				href: "https://maps.app.goo.gl/BCFDzM1KamRXjLUWA",
+				target: "_blank",
 			},
 		],
-		timeout: new Date("2025-04-18T15:00"),
-	},
-	{
-		type: "feature",
-		title: "Egg Hunt",
-		body: (
-			<>
-				<p>
-					Who doesn't love an egg hunt? On Easter Saturday, we&apos;ll
-					be heading out to Victoria Park to find some hidden
-					chocolate eggs. All parents and kids welcome!
-				</p>
-				<p>⸻</p>
-				<p>2-3pm • 19/04/25</p>
-			</>
-		),
 		images: [
 			{
-				src: "/assets/images/egg-hunt-map.svg",
-				alt: "An egg hunt",
+				src: "/assets/images/community-games.jpg",
+				alt: "Community games",
 			},
 		],
 		imageEnlargeable: true,
-		timeout: new Date("2025-04-19T15:00"),
+		timeout: new Date("2025-06-22T20:00"),
 	},
 	{
 		type: "feature",
