@@ -28,7 +28,7 @@ export default (showModal) => [
 			},
 		],
 		imageEnlargeable: true,
-		timeout: new Date("2025-06-22T20:00"),
+		timeout: new Date("2025-06-25T20:00"),
 	},
 	{
 		type: "feature",
