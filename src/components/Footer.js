@@ -47,7 +47,7 @@ let sections = [
 			},
 		],
 	},
-	{
+	/*{
 		title: "Support us",
 		links: [
 			{
@@ -55,7 +55,7 @@ let sections = [
 				href: "https://stewardship.org",
 			},
 		],
-	},
+	},*/
 ];
 
 export default () => (
