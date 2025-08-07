@@ -46,7 +46,7 @@ export default [
 				body: (
 					<p>
 						Gil is married to Lucy. They live together with their
-						daughter Phoebe in Bow. Gil is currently studying
+						two daughters in Bow. Gil is currently studying
 						Theology at Union School of Theology.
 					</p>
 				),
