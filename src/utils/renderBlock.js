@@ -83,7 +83,6 @@ export default (block) => {
 				<header className="header__wrapper wrapper">
 					<div className="header__container container">
 						{!!block.title ? <h1>{block.title}</h1> : ""}
-						<hr className="header__divider" />
 						{!!block.body ? (
 							<div className="header__body">{block.body}</div>
 						) : (
@@ -96,14 +95,15 @@ export default (block) => {
 			return (
 				<section className="content-grid__wrapper wrapper">
 					<div className="content-grid__container container">
-						{!!block.title ? (
-							<h1 className="content-grid__title">
-								{block.title}
-							</h1>
+						{!!block.body || !!block.title ? (
+							<div className="content-grid__text-body">
+								<h1>{block.title}</h1>
+
+								{block.body}
+							</div>
 						) : (
 							""
 						)}
-						{!!block.body ? <p>{block.body}</p> : ""}
 						<div className="content-grid__cells layout--grid">
 							{!!block.cells && block.cells.length > 0
 								? block.cells.map((cell, index) => {

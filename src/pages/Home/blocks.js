@@ -3,14 +3,17 @@ import SMSReminderModal from "../../components/SMSReminderModal";
 export default (showModal) => [
 	{
 		type: "feature",
-		title: "This Week: Community Games",
+		title: (
+			<>
+				This Summer: <span className="serif">Community Games</span>
+			</>
+		),
 		body: (
 			<>
 				<p>
-					Join us this Wednesday for fun, games and snacks on the
-					Wellington estate.
+					Join us this Wednesday from 6:30-8pm for fun, games and
+					snacks on the Wellington estate.
 				</p>
-				<p>6:30-8pm • Wednesday 22 June, 2025</p>
 			</>
 		),
 		buttons: [
@@ -26,8 +29,7 @@ export default (showModal) => [
 				alt: "Community games",
 			},
 		],
-		imageEnlargeable: true,
-		// timeout: new Date("2025-06-25T20:00"),
+		timeout: new Date("2025-08-27T20:00"),
 	},
 	{
 		type: "feature",

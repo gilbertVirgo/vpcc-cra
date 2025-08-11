@@ -182,6 +182,17 @@ const Connect = () => {
 						<Button type="submit" aria-label="Send message">
 							Send
 						</Button>
+						<p className="subtext">
+							This site is protected by reCAPTCHA and the Google{" "}
+							<a href="https://policies.google.com/privacy">
+								Privacy Policy
+							</a>{" "}
+							and{" "}
+							<a href="https://policies.google.com/terms">
+								Terms of Service
+							</a>{" "}
+							apply.
+						</p>
 					</form>
 					<img
 						src="/assets/images/connect_filtered.jpeg"

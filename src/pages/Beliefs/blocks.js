@@ -5,10 +5,30 @@ export default [
 		body: (
 			<p>
 				We submit to the{" "}
-				<a href="https://www.uccf.org.uk/media/pages/impact/more/asked-to-be-a-leader/1964487579-1724852466/uccf_doctrinalbasis.pdf">
-					UCCF Doctrinal Basis
-				</a>
-				.
+				<a
+					href="https://www.uccf.org.uk/media/pages/impact/more/asked-to-be-a-leader/1964487579-1724852466/uccf_doctrinalbasis.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					UCCF doctrinal basis
+				</a>{" "}
+				as well as the FIEC's{" "}
+				<a
+					href="https://fiec.org.uk/who-we-are/beliefs"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					doctrinal basis
+				</a>{" "}
+				and{" "}
+				<a
+					href="https://fiec.org.uk/who-we-are/beliefs#ethos"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					ethos statements
+				</a>{" "}
+				on gospel unity, women in ministry and same sex marriage.
 			</p>
 		),
 		cells: [

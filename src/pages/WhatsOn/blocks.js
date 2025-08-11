@@ -1,52 +1,68 @@
+import { buildQueries } from "@testing-library/dom";
 import SMSReminderModal from "../../components/SMSReminderModal";
 
 export default (showModal) => [
 	{
 		type: "feature",
-		title: "Hot Cross Buns",
+		title: (
+			<>
+				This Summer: <span className="serif">Community Games</span>
+			</>
+		),
 		body: (
 			<>
 				<p>
-					Every year, a team of VPCC volunteers bake, ice and glaze
-					over 200 hot cross buns for the enjoyment of the community.
-					Why not join us for the festive feast on Good Friday?
+					Join us this Wednesday from 6:30-8pm for fun, games and
+					snacks on the Wellington estate.
 				</p>
-				<p>⸻</p>
-				<p>17 Lark Row, E2 9JA</p>
-				<p>11am-2pm • 18/04/25</p>
 			</>
 		),
-		images: [
+		buttons: [
 			{
-				src: "/assets/images/hot-cross-buns_filtered.jpg",
-				alt: "Hot cross buns",
+				label: "Get directions",
+				href: "https://maps.app.goo.gl/BCFDzM1KamRXjLUWA",
+				target: "_blank",
 			},
 		],
-		timeout: new Date("2025-04-18T15:00"),
+		images: [
+			{
+				src: "/assets/images/community-games.jpg",
+				alt: "Community games",
+			},
+		],
+		timeout: new Date("2025-08-27T20:00"),
 	},
 	{
 		type: "feature",
-		title: "Egg Hunt",
+		title: (
+			<>
+				Reading Group: <span className="serif">The Reason for God</span>
+			</>
+		),
 		body: (
 			<>
 				<p>
-					Who doesn't love an egg hunt? On Easter Saturday, we&apos;ll
-					be heading out to Victoria Park to find some hidden
-					chocolate eggs. All parents and kids welcome!
+					Explore <em>The Reason for God</em> by Tim Keller in our
+					reading group — a space to to think deeply about the Bible,
+					science and apologetics.
 				</p>
-				<p>⸻</p>
-				<p>2-3pm • 19/04/25</p>
+				<p>Come be with us this Monday from 7-8pm.</p>
 			</>
 		),
 		images: [
 			{
-				src: "/assets/images/egg-hunt-map.svg",
-				alt: "An egg hunt",
+				src: "/assets/images/the-reason-for-god.jpg",
+				alt: "The Reason for God",
 			},
 		],
-		imageEnlargeable: true,
-		timeout: new Date("2025-04-19T15:00"),
+		buttons: [
+			{
+				label: "Get in touch",
+				href: "/connect",
+			},
+		],
 	},
+
 	{
 		type: "feature",
 		title: "Prayer meetings",
@@ -95,6 +111,34 @@ export default (showModal) => [
 			{
 				src: "/assets/images/sundays-4_filtered.jpeg",
 				alt: "A VPCC Sunday Service",
+			},
+		],
+	},
+	{
+		type: "feature",
+		title: <>Women’s breakfast</>,
+		body: (
+			<>
+				<p>
+					Join us for a morning of food, fellowship and fun at our
+					monthly women’s breakfast.
+				</p>
+				<p>
+					All women are welcome on 10am on the last Saturday of every
+					month.
+				</p>
+			</>
+		),
+		images: [
+			{
+				src: "/assets/images/womens-breakfast--filtered.jpg",
+				alt: "Women's breakfast",
+			},
+		],
+		buttons: [
+			{
+				label: "Get in touch",
+				href: "/connect",
 			},
 		],
 	},
