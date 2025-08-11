@@ -47,6 +47,19 @@ let sections = [
 			},
 		],
 	},
+	{
+		title: "Associated Organisations",
+		links: [
+			{
+				label: "FIEC",
+				href: "https://fiec.org.uk",
+			},
+			{
+				label: "Christian Heritage London",
+				href: "https://christianheritagelondon.org",
+			},
+		],
+	},
 	/*{
 		title: "Support us",
 		links: [

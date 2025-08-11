@@ -185,7 +185,7 @@ export default (showModal) => [
 		],
 		images: [
 			{
-				src: "/assets/images/connect_filtered.jpeg",
+				src: "/assets/images/hot-cross-buns_filtered.jpg",
 				alt: "A VPCC Sunday Service",
 			},
 		],

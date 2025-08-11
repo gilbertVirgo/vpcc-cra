@@ -77,7 +77,7 @@ export default (showModal) => [
 		buttons: [{ label: "Find out what’s on", href: "/whats-on" }],
 		images: [
 			{
-				src: "/assets/images/prayer-meeting_filtered.jpeg",
+				src: "/assets/images/general--2.jpg",
 				alt: "VPCC members enjoying lunch together",
 			},
 		],
@@ -106,7 +106,9 @@ export default (showModal) => [
 			</p>
 		),
 		buttons: [{ label: "Find out more", href: "/beliefs" }],
-		images: [{ src: "/assets/images/beliefs_filtered.jpg", alt: "" }],
+		images: [
+			{ src: "/assets/images/prayer-meeting_filtered.jpeg", alt: "" },
+		],
 	},
 	{
 		type: "feature",
