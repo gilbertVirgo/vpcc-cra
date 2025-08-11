@@ -10,7 +10,6 @@ export default (showModal) => [
 					Join us this Wednesday for fun, games and snacks on the
 					Wellington estate.
 				</p>
-				<p>⸻</p>
 				<p>6:30-8pm • Wednesday 22 June, 2025</p>
 			</>
 		),
