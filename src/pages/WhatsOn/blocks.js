@@ -89,13 +89,10 @@ export default (showModal) => [
 		type: "feature",
 		title: "Sundays",
 		body: (
-			<>
-				<p>We are Victoria Park Community Church.</p>
-				<p>
-					We meet from 3:00pm-4:30pm at Victoria Park Baptist Church,
-					186 Grove Road, London E3 5TG.
-				</p>
-			</>
+			<p>
+				We meet from 3:00pm-4:30pm at Victoria Park Baptist Church, 186
+				Grove Road, London E3 5TG.
+			</p>
 		),
 		buttons: [
 			{
