@@ -215,6 +215,16 @@ body div:last-child:has(.grecaptcha-badge) {
 	}
 }
 
+strong,
+b {
+	font-weight: 700;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
 body {
 	display: flex;
 	flex-direction: column;

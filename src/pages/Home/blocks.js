@@ -5,31 +5,33 @@ export default (showModal) => [
 		type: "feature",
 		title: (
 			<>
-				This Summer: <span className="serif">Community Games</span>
+				This Wednesday:{" "}
+				<span className="serif">Frisbee in the Park</span>
 			</>
 		),
 		body: (
 			<>
 				<p>
-					Join us this Wednesday from 6:30-8pm for fun, games and
-					snacks on the Wellington estate.
+					Join us in <strong>Victoria Park</strong> from{" "}
+					<strong>6pm</strong> for some casual frisbee, hanging out
+					and a chance to meet some of the VPCC community.
 				</p>
 			</>
 		),
 		buttons: [
 			{
 				label: "Get directions",
-				href: "https://maps.app.goo.gl/BCFDzM1KamRXjLUWA",
+				href: "https://maps.app.goo.gl/bbPLsXdSQeCKYkHY9",
 				target: "_blank",
 			},
 		],
 		images: [
 			{
-				src: "/assets/images/community-games.jpg",
-				alt: "Community games",
+				src: "/assets/images/frisbee.jpg",
+				alt: "Frisbee in the park",
 			},
 		],
-		timeout: new Date("2025-08-27T20:00"),
+		timeout: new Date("2025-09-24T18:00"),
 	},
 	{
 		type: "feature",
@@ -57,6 +59,10 @@ export default (showModal) => [
 		images: [
 			{
 				src: "/assets/images/sundays-1_filtered.jpeg",
+				alt: "A VPCC Sunday Service",
+			},
+			{
+				src: "/assets/images/baby-1--filtered.jpg",
 				alt: "A VPCC Sunday Service",
 			},
 			{

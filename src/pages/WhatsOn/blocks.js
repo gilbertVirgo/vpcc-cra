@@ -6,62 +6,64 @@ export default (showModal) => [
 		type: "feature",
 		title: (
 			<>
-				This Summer: <span className="serif">Community Games</span>
+				This Wednesday:{" "}
+				<span className="serif">Frisbee in the Park</span>
 			</>
 		),
 		body: (
 			<>
 				<p>
-					Join us this Wednesday from 6:30-8pm for fun, games and
-					snacks on the Wellington estate.
+					Join us in <strong>Victoria Park</strong> from{" "}
+					<strong>6pm</strong> for some casual frisbee, hanging out
+					and a chance to meet some of the VPCC community.
 				</p>
 			</>
 		),
 		buttons: [
 			{
 				label: "Get directions",
-				href: "https://maps.app.goo.gl/BCFDzM1KamRXjLUWA",
+				href: "https://maps.app.goo.gl/bbPLsXdSQeCKYkHY9",
 				target: "_blank",
 			},
 		],
 		images: [
 			{
-				src: "/assets/images/community-games.jpg",
-				alt: "Community games",
+				src: "/assets/images/frisbee.jpg",
+				alt: "Frisbee in the park",
 			},
 		],
-		timeout: new Date("2025-08-27T20:00"),
+		timeout: new Date("2025-09-24T18:00"),
 	},
-	{
-		type: "feature",
-		title: (
-			<>
-				Reading Group: <span className="serif">The Reason for God</span>
-			</>
-		),
-		body: (
-			<>
-				<p>
-					Explore <em>The Reason for God</em> by Tim Keller in our
-					reading group — a space to to think deeply about the Bible,
-					science and apologetics.
-				</p>
-				<p>Come be with us this Monday from 7-8pm.</p>
-			</>
-		),
-		images: [
-			{
-				src: "/assets/images/the-reason-for-god.jpg",
-				alt: "The Reason for God",
-			},
-		],
-		buttons: [
-			{
-				label: "Get in touch",
-				href: "/connect",
-			},
-		],
-	},
+	// {
+	// 	type: "feature",
+	// 	title: (
+	// 		<>
+	// 			Reading Group: <span className="serif">The Reason for God</span>
+	// 		</>
+	// 	),
+	// 	body: (
+	// 		<>
+	// 			<p>
+	// 				Explore <em>The Reason for God</em> by Tim Keller in our
+	// 				reading group — a space to to think deeply about the Bible,
+	// 				science and apologetics.
+	// 			</p>
+	// 			<p>Come be with us this Monday from 7-8pm.</p>
+	// 		</>
+	// 	),
+	// 	images: [
+	// 		{
+	// 			src: "/assets/images/the-reason-for-god.jpg",
+	// 			alt: "The Reason for God",
+	// 		},
+	// 	],
+	// 	buttons: [
+	// 		{
+	// 			label: "Get in touch",
+	// 			href: "/connect",
+	// 		},
+	// 	],
+	// },
 
 	{
 		type: "feature",

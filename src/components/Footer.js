@@ -22,6 +22,10 @@ let sections = [
 		title: "Legal",
 		links: [
 			{
+				label: "Safeguarding Policy",
+				href: "/assets/pdf/safeguarding-policy.pdf",
+			},
+			{
 				label: "Complaint Policy",
 				href: "/assets/pdf/complaint-policy.pdf",
 			},
@@ -43,7 +47,7 @@ let sections = [
 			},
 			{
 				label: "Serious Incident Reporting Policy",
-				href: "/assets/pdf/serious-indicent-reporting-policy.pdf",
+				href: "/assets/pdf/serious-incident-reporting-policy.pdf",
 			},
 		],
 	},
