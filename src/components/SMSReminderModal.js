@@ -23,9 +23,9 @@ const SMSReminderModal = () => {
 				<h3>Send me a reminder text message</h3>
 				<p>
 					With the hustle and bustle of London life, sometimes a nudge
-					can be helpful. If you&apos;d like to be reminded about this
-					week&apos;s Sunday service, put your number down, and we'll
-					shoot you a reminder an hour before we start.
+					can be helpful. If you&rsquo;d like to be reminded about
+					this week&rsquo;s Sunday service, put your number down, and
+					we'll shoot you a reminder an hour before we start.
 				</p>
 			</div>
 

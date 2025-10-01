@@ -10,7 +10,7 @@ let SuccessModal = () => (
 	<div className="mini-container">
 		<h3>Success</h3>
 		<p>
-			Thank you for getting in touch. We&apos;ll get back to you as soon
+			Thank you for getting in touch. We&rsquo;ll get back to you as soon
 			as possible.
 		</p>
 	</div>
@@ -20,8 +20,8 @@ let ErrorModal = () => (
 	<div className="mini-container">
 		<h3>Error</h3>
 		<p>
-			It looks like something&apos;s gone wrong and your message
-			hasn&apos;t been sent.
+			It looks like something&rsquo;s gone wrong and your message
+			hasn&rsquo;t been sent.
 		</p>
 		<p>
 			Please try again later or contact us directly on{" "}

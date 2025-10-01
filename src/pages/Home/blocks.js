@@ -40,17 +40,26 @@ export default (showModal) => [
 			<>
 				<p>We are Victoria Park Community Church.</p>
 				<p>
+					This week, we're meeting at Ben &amp; Rachel&rsquo;s home in
+					Bethnal Green.
+				</p>
+				<p>
+					Do get in touch and we&rsquo;d be delighted to share the
+					address.
+				</p>
+				{/* <p>
 					We meet from 3:00pm-4:30pm at Victoria Park Baptist Church,
 					186 Grove Road, London E3 5TG.
-				</p>
+				</p> */}
 			</>
 		),
 		buttons: [
-			{
-				label: "Get directions",
-				href: "https://maps.app.goo.gl/CQFsTYqZfuUAEvuP7",
-				target: "_blank",
-			},
+			{ label: "Get in touch", href: "/connect" },
+			// {
+			// 	label: "Get directions",
+			// 	href: "https://maps.app.goo.gl/CQFsTYqZfuUAEvuP7",
+			// 	target: "_blank",
+			// },
 			// {
 			// 	label: "Send me a reminder text",
 			// 	onClick: showModal(<SMSReminderModal/>),
