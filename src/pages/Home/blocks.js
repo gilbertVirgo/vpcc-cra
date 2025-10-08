@@ -54,7 +54,7 @@ export default (showModal) => [
 			</>
 		),
 		buttons: [
-			{ label: "Get in touch", href: "/connect" },
+			// { label: "Get in touch", href: "/connect" },
 			{
 				label: "Get directions",
 				href: "https://maps.app.goo.gl/CQFsTYqZfuUAEvuP7",
