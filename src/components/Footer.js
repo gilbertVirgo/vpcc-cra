@@ -25,10 +25,10 @@ let sections = [
 			// 	label: "Safeguarding Policy",
 			// 	href: "/assets/pdf/safeguarding-policy.pdf",
 			// },
-			{
-				label: "Complaint Policy",
-				href: "/assets/pdf/complaint-policy.pdf",
-			},
+			// {
+			// 	label: "Complaint Policy",
+			// 	href: "/assets/pdf/complaint-policy.pdf",
+			// },
 			{
 				label: "Conflict of Interest Policy",
 				href: "/assets/pdf/conflict-of-interest-policy.pdf",
