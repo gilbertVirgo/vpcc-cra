@@ -66,7 +66,7 @@ export default [
 		title: "Our team",
 		cells: [
 			{
-				title: "Ben Virgo",
+				title: "Ben",
 				subtitle: "Lead Pastor",
 				body: (
 					<p>
@@ -82,7 +82,7 @@ export default [
 				),
 			},
 			{
-				title: "Gil Virgo",
+				title: "Gil",
 				subtitle: "Pastor",
 				body: (
 					<p>
@@ -96,31 +96,31 @@ export default [
 					</p>
 				),
 			},
+			// {
+			// 	title: "Isaiah Jagdeo",
+			// 	subtitle: "Church Manager",
+			// 	body: (
+			// 		<p>
+			// 			Isaiah is married to Beth. They live together in
+			// 			Stratford. Isaiah works as a Mission Associate for
+			// 			Children, Youth & Schools at{" "}
+			// 			<a href="https://www.lcm.org.uk">London City Mission</a>
+			// 			.
+			// 		</p>
+			// 	),
+			// },
+			// {
+			// 	title: "Beth Jagdeo",
+			// 	subtitle: "Lead Kids Worker",
+			// 	body: (
+			// 		<p>
+			// 			Beth is married to Isaiah. During the week, she works
+			// 			with a medical charity.
+			// 		</p>
+			// 	),
+			// },
 			{
-				title: "Isaiah Jagdeo",
-				subtitle: "Church Manager",
-				body: (
-					<p>
-						Isaiah is married to Beth. They live together in
-						Stratford. Isaiah works as a Mission Associate for
-						Children, Youth & Schools at{" "}
-						<a href="https://www.lcm.org.uk">London City Mission</a>
-						.
-					</p>
-				),
-			},
-			{
-				title: "Beth Jagdeo",
-				subtitle: "Lead Kids Worker",
-				body: (
-					<p>
-						Beth is married to Isaiah. During the week, she works
-						with a medical charity.
-					</p>
-				),
-			},
-			{
-				title: "Rachel Virgo",
+				title: "Rachel",
 				subtitle: "Life Skills Coach",
 				body: (
 					<p>
