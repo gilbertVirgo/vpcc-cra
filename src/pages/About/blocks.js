@@ -15,49 +15,24 @@ export default [
 					Tower Hamlets — a diverse area where few know Christ.
 				</p>
 
-				<p>
+				{/* <p>
 					From the start, prayer shaped our life together, and God
 					answered: a neighbour overcame depression, a lonely student
 					found belonging, and others discovered genuine friendship.
-				</p>
+				</p> */}
 
-				<p>
+				{/* <p>
 					As we grew, the local Tenants and Residents Association
 					offered us their community centre just when we needed more
 					space.
-				</p>
+				</p> */}
 
 				<p>
 					Now we meet at Victoria Park Baptist Church, welcoming
 					people from near and far, united by the gospel, building
 					deep relationships, and reaching out with love to our wider
-					community.
+					community. We are blessed to be a blessing.
 				</p>
-				{/* <p>
-					Victoria Park Community Church began in 2011, when a group
-					of friends and family gathered in Pastor Ben’s living room
-					with a shared vision: to enjoy the hope of the gospel and
-					share it in Tower Hamlets — a place rich in diversity but
-					where few know Christ.
-				</p>
-				<p>
-					From the outset, prayer shaped our life together, and God
-					answered in remarkable ways: a neighbour came through
-					depression, a student without friends found belonging, and
-					others discovered the welcome of genuine friendship.
-				</p>
-				<p>
-					As our numbers grew, so did the opportunities. The very week
-					we needed more room, the local Tenants and Residents
-					Association offered us their community centre.
-				</p>
-				<p>
-					Today we meet at Victoria Park Baptist Church, with people
-					coming from both nearby and further afield, united by the
-					same heartbeat: the gospel at the centre, blessed to be a
-					blessing, building deep relationships, and reaching out with
-					love to our wider community.
-				</p> */}
 			</>
 		),
 	},
