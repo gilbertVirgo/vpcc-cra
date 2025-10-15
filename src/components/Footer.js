@@ -21,10 +21,10 @@ let sections = [
 	{
 		title: "Legal",
 		links: [
-			{
-				label: "Safeguarding Policy",
-				href: "/assets/pdf/safeguarding-policy.pdf",
-			},
+			// {
+			// 	label: "Safeguarding Policy",
+			// 	href: "/assets/pdf/safeguarding-policy.pdf",
+			// },
 			{
 				label: "Complaint Policy",
 				href: "/assets/pdf/complaint-policy.pdf",
@@ -33,22 +33,22 @@ let sections = [
 				label: "Conflict of Interest Policy",
 				href: "/assets/pdf/conflict-of-interest-policy.pdf",
 			},
-			{
-				label: "Data Protection & Privacy Policy",
-				href: "/assets/pdf/data-protection-privacy-policy.pdf",
-			},
-			{
-				label: "Financial Management Policy",
-				href: "/assets/pdf/financial-management-policy.pdf",
-			},
-			{
-				label: "Governing Document",
-				href: "/assets/pdf/governing-document.pdf",
-			},
-			{
-				label: "Serious Incident Reporting Policy",
-				href: "/assets/pdf/serious-incident-reporting-policy.pdf",
-			},
+			// {
+			// 	label: "Data Protection & Privacy Policy",
+			// 	href: "/assets/pdf/data-protection-privacy-policy.pdf",
+			// },
+			// {
+			// 	label: "Financial Management Policy",
+			// 	href: "/assets/pdf/financial-management-policy.pdf",
+			// },
+			// {
+			// 	label: "Governing Document",
+			// 	href: "/assets/pdf/governing-document.pdf",
+			// },
+			// {
+			// 	label: "Serious Incident Reporting Policy",
+			// 	href: "/assets/pdf/serious-incident-reporting-policy.pdf",
+			// },
 		],
 	},
 	{
