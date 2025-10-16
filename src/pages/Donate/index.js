@@ -30,7 +30,7 @@ let ErrorModal = () => (
 	</div>
 );
 
-const Connect = () => {
+export default () => {
 	let navigate = useNavigate();
 	const { showModal } = useContext(ModalContext);
 
@@ -57,7 +57,7 @@ const Connect = () => {
 		if (token) {
 			try {
 				const response = await fetch(
-					"/.netlify/functions/submitContactForm",
+					"/.netlify/functions/submitDonateForm",
 					{
 						method: "POST",
 						headers: {
@@ -82,26 +82,31 @@ const Connect = () => {
 		}
 	};
 
+	// Seriously thinking this and the connect page would be better off without the image, just centred fields between 4 / -4 or something.
+
 	return (
-		<main className="connect__wrapper wrapper">
-			<div className="connect__container container layout--grid">
-				<header className="connect__header group--vt-md">
-					<h1>Connect</h1>
+		<main className="donate__wrapper wrapper">
+			<div className="donate__container container layout--grid">
+				<header className="donate__header group--vt-md">
+					<h1>Donate</h1>
 					<div className="group--vt-sm">
-						<p>We’d love to hear from you!</p>
 						<p>
-							Fill in your details below, and someone from
-							Victoria Park Community Church will get back to you
-							shortly.
+							Thank you for your interest in supporting Victoria
+							Park Community Church.
+						</p>
+						<p>
+							Please share your contact details below, and we’ll
+							be in touch soon to discuss the best way for you to
+							make your donation.
 						</p>
 					</div>
 				</header>
 
 				<form
 					method="POST"
-					className="connect__form form"
+					className="donate__form form"
 					onSubmit={handleSubmit}
-					aria-labelledby="connect-heading"
+					aria-labelledby="donate-heading"
 					noValidate
 				>
 					<div className="form__input-group">
@@ -208,7 +213,3 @@ const Connect = () => {
 		</main>
 	);
 };
-
-// This works! Just need to add 'success' and 'error' pages.
-
-export default Connect;

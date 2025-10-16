@@ -275,6 +275,10 @@ a:hover {
 	}
 }
 
+p {
+	text-wrap: pretty;
+}
+
 p a {
 	color: $color--orange-dark;
 	font-weight: 600;
@@ -321,6 +325,33 @@ p,
 li {
 	font-size: $spacing--md;
 	line-height: 160%;
+}
+
+// Mixin for creating flex groups
+@mixin flex-group($direction, $gap) {
+	display: flex;
+	flex-direction: $direction;
+	gap: $gap;
+}
+
+// Generate all flex group classes
+$spacing-sizes: (
+	"xxs": $spacing--xxs,
+	"xs": $spacing--xs,
+	"sm": $spacing--sm,
+	"md": $spacing--md,
+	"lg": $spacing--lg,
+	"xl": $spacing--xl,
+);
+
+@each $size, $value in $spacing-sizes {
+	.group--hz-#{$size} {
+		@include flex-group(row, $value);
+	}
+
+	.group--vt-#{$size} {
+		@include flex-group(column, $value);
+	}
 }
 
 .subtext {
@@ -535,11 +566,11 @@ img {
 .navigation-bar__links {
 	display: flex;
 	gap: $spacing--md;
+	align-items: center;
 
 	@include media(null, sm) {
 		grid-column: 1 / -1;
 		flex-direction: column;
-		align-items: center;
 		height: 100%;
 	}
 
@@ -676,7 +707,8 @@ img {
 
 .page__about,
 .page__beliefs,
-.page__connect {
+.page__connect,
+.page__donate {
 	gap: $spacing--xl;
 
 	@include media(null, sm) {
@@ -730,32 +762,16 @@ img {
 	border: 2px solid $color--orange;
 }
 
-.connect__form {
+.connect__form,
+.donate__form,
+.connect__header,
+.donate__header {
 	@include media(null, sm) {
-		grid-column: 1 / -1;
+		grid-column: 2 / -2;
 	}
 
 	@include media(sm) {
-		grid-column: 1 / 6;
-	}
-}
-
-.connect__container {
-	display: flex;
-	flex-direction: column;
-	gap: $spacing--lg;
-
-	.layout--grid img {
-		@include media(null, sm) {
-			display: none;
-		}
-
-		@include media(sm) {
-			grid-column: 7 / -1;
-			object-fit: cover;
-			width: 100%;
-			height: 100%;
-		}
+		grid-column: 4 / -4;
 	}
 }
 
