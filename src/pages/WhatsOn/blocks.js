@@ -64,7 +64,28 @@ export default (showModal) => [
 	// 		},
 	// 	],
 	// },
-
+	{
+		type: "feature",
+		title: "Calendar",
+		body: (
+			<p>
+				See all our upcoming events and activities on our calendar page.
+			</p>
+		),
+		images: [
+			{
+				src: "/assets/images/calendar.jpg",
+				alt: "Calendar",
+			},
+		],
+		buttons: [
+			{
+				label: "View calendar",
+				href: "https://calendar.vpcc.church",
+				target: "_blank",
+			},
+		],
+	},
 	{
 		type: "feature",
 		title: "Prayer meetings",
@@ -107,7 +128,6 @@ export default (showModal) => [
 			</>
 		),
 		buttons: [
-			{ label: "Get in touch", href: "/connect" },
 			{
 				label: "Get directions",
 				href: "https://maps.app.goo.gl/CQFsTYqZfuUAEvuP7",

@@ -92,7 +92,7 @@ export default (showModal) => [
 		buttons: [{ label: "Find out what’s on", href: "/whats-on" }],
 		images: [
 			{
-				src: "/assets/images/general--2.jpg",
+				src: "/assets/images/calendar.jpg",
 				alt: "VPCC members enjoying lunch together",
 			},
 		],
@@ -147,7 +147,7 @@ export default (showModal) => [
 		buttons: [{ label: "Send us an email", href: "/connect" }],
 		images: [
 			{
-				src: "/assets/images/connect_filtered.jpeg",
+				src: "/assets/images/general--2.jpg",
 				alt: "",
 			},
 		],

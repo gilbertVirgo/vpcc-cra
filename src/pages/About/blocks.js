@@ -71,6 +71,16 @@ export default [
 					</p>
 				),
 			},
+			{
+				title: "Tilly",
+				subtitle: "Safeguarding Lead",
+				body: (
+					<p>
+						Tilly lives in Stratford. She currently works with a
+						charity supporting vulnerable children and families.
+					</p>
+				),
+			},
 			// {
 			// 	title: "Isaiah Jagdeo",
 			// 	subtitle: "Church Manager",

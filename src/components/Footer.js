@@ -52,6 +52,20 @@ let sections = [
 		],
 	},
 	{
+		title: "Quick Links",
+		links: [
+			{
+				label: "Calendar",
+				target: "_blank",
+				href: "https://calendar.vpcc.church",
+			},
+			{
+				label: "Donate",
+				href: "/donate",
+			},
+		],
+	},
+	{
 		title: "Associated Organisations",
 		links: [
 			{
@@ -101,12 +115,12 @@ export default () => (
 					</ul>
 				</section>
 			))}
-			<section className="footer__section__wrapper">
+			{/* <section className="footer__section__wrapper">
 				<img
 					src="/assets/images/affiliated-to-FIEC-logo-white.png"
 					style={{ maxWidth: "192px" }}
 				/>
-			</section>
+			</section> */}
 		</div>
 	</footer>
 );
