@@ -40,6 +40,7 @@ export default () => {
 		email: "",
 		message: "",
 	});
+	const [errors, setErrors] = useState({});
 
 	const { executeRecaptcha } = useContext(ReCaptchaContext);
 
@@ -49,10 +50,29 @@ export default () => {
 			...prevData,
 			[name]: value,
 		}));
+
+		// Clear field-specific error while typing
+		setErrors((prev) => ({ ...prev, [name]: undefined }));
+	};
+
+	const isValidEmail = (value) => {
+		return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+	};
+
+	const validate = () => {
+		const newErrors = {};
+		if (!formData.firstName.trim()) newErrors.firstName = "First name is required.";
+		if (!formData.lastName.trim()) newErrors.lastName = "Last name is required.";
+		if (!formData.email.trim()) newErrors.email = "Email is required.";
+		else if (!isValidEmail(formData.email)) newErrors.email = "Enter a valid email address.";
+		if (!formData.message.trim()) newErrors.message = "Message is required.";
+		setErrors(newErrors);
+		return Object.keys(newErrors).length === 0;
 	};
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		if (!validate()) return;
 		const token = await executeRecaptcha("contact_form");
 		if (token) {
 			try {
@@ -120,6 +140,7 @@ export default () => {
 								name="firstName"
 								value={formData.firstName}
 								onChange={handleChange}
+								aria-invalid={errors.firstName ? "true" : "false"}
 								aria-required="true"
 								aria-labelledby="firstName-label"
 								aria-describedby="firstName-error"
@@ -129,7 +150,9 @@ export default () => {
 								id="firstName-error"
 								className="error-message"
 								aria-live="polite"
-							></div>
+							>
+								{errors.firstName}
+							</div>
 						</div>
 						<div className="form__field">
 							<label htmlFor="lastName" id="lastName-label">
@@ -141,6 +164,7 @@ export default () => {
 								name="lastName"
 								value={formData.lastName}
 								onChange={handleChange}
+								aria-invalid={errors.lastName ? "true" : "false"}
 								aria-required="true"
 								aria-labelledby="lastName-label"
 								aria-describedby="lastName-error"
@@ -150,7 +174,9 @@ export default () => {
 								id="lastName-error"
 								className="error-message"
 								aria-live="polite"
-							></div>
+							>
+								{errors.lastName}
+							</div>
 						</div>
 					</div>
 					<div className="form__field">
@@ -163,6 +189,7 @@ export default () => {
 							name="email"
 							value={formData.email}
 							onChange={handleChange}
+							aria-invalid={errors.email ? "true" : "false"}
 							aria-required="true"
 							aria-labelledby="email-label"
 							aria-describedby="email-error"
@@ -172,7 +199,9 @@ export default () => {
 							id="email-error"
 							className="error-message"
 							aria-live="polite"
-						></div>
+						>
+							{errors.email}
+						</div>
 					</div>
 					<div className="form__field">
 						<label htmlFor="message" id="message-label">
@@ -183,6 +212,7 @@ export default () => {
 							name="message"
 							value={formData.message}
 							onChange={handleChange}
+							aria-invalid={errors.message ? "true" : "false"}
 							aria-required="true"
 							aria-labelledby="message-label"
 							aria-describedby="message-error"
@@ -192,7 +222,9 @@ export default () => {
 							id="message-error"
 							className="error-message"
 							aria-live="polite"
-						></div>
+						>
+							{errors.message}
+						</div>
 					</div>
 					<Button type="submit" aria-label="Send message">
 						Send
