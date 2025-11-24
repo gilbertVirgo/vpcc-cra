@@ -61,11 +61,15 @@ const Connect = () => {
 
 	const validate = () => {
 		const newErrors = {};
-		if (!formData.firstName.trim()) newErrors.firstName = "First name is required.";
-		if (!formData.lastName.trim()) newErrors.lastName = "Last name is required.";
+		if (!formData.firstName.trim())
+			newErrors.firstName = "First name is required.";
+		if (!formData.lastName.trim())
+			newErrors.lastName = "Last name is required.";
 		if (!formData.email.trim()) newErrors.email = "Email is required.";
-		else if (!isValidEmail(formData.email)) newErrors.email = "Enter a valid email address.";
-		if (!formData.message.trim()) newErrors.message = "Message is required.";
+		else if (!isValidEmail(formData.email))
+			newErrors.email = "Enter a valid email address.";
+		if (!formData.message.trim())
+			newErrors.message = "Message is required.";
 		setErrors(newErrors);
 		return Object.keys(newErrors).length === 0;
 	};
@@ -136,7 +140,9 @@ const Connect = () => {
 								name="firstName"
 								value={formData.firstName}
 								onChange={handleChange}
-								aria-invalid={errors.firstName ? "true" : "false"}
+								aria-invalid={
+									errors.firstName ? "true" : "false"
+								}
 								aria-required="true"
 								aria-labelledby="firstName-label"
 								aria-describedby="firstName-error"
@@ -160,7 +166,9 @@ const Connect = () => {
 								name="lastName"
 								value={formData.lastName}
 								onChange={handleChange}
-								aria-invalid={errors.lastName ? "true" : "false"}
+								aria-invalid={
+									errors.lastName ? "true" : "false"
+								}
 								aria-required="true"
 								aria-labelledby="lastName-label"
 								aria-describedby="lastName-error"
