@@ -647,7 +647,6 @@ img {
 	h1,
 	.header__body {
 		width: 100%;
-		max-width: 35rem;
 	}
 }
 
@@ -658,9 +657,11 @@ img {
 }
 
 .content-grid__container {
-	display: flex;
-	flex-direction: column;
-	gap: $spacing--lg;
+	@extend .layout--grid;
+
+	// display: flex;
+	// flex-direction: column;
+	row-gap: $spacing--lg;
 }
 
 .content-grid__text-body {
@@ -678,6 +679,13 @@ img {
 
 .content-grid__cells {
 	gap: $spacing--sm;
+
+	@include media(null, sm) {
+		grid-column: 1 / -1;
+	}
+	@include media(sm) {
+		grid-column: 2 / -2;
+	}
 }
 
 .content-grid__cell {
@@ -690,7 +698,7 @@ img {
 	gap: $spacing--sm;
 
 	@include media(null, sm) {
-		grid-column: 1 / -1;
+		grid-column: 2 / -2;
 	}
 
 	@include media(sm) {
@@ -767,10 +775,7 @@ img {
 	border: 2px solid $color--orange;
 }
 
-.connect__form,
-.donate__form,
-.connect__header,
-.donate__header {
+.grid--central {
 	@include media(null, sm) {
 		grid-column: 2 / -2;
 	}

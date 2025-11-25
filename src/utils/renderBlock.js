@@ -80,14 +80,16 @@ export default (block) => {
 			);
 		case "header":
 			return (
-				<header className="header__wrapper wrapper">
-					<div className="header__container container">
-						{!!block.title ? <h1>{block.title}</h1> : ""}
-						{!!block.body ? (
-							<div className="header__body">{block.body}</div>
-						) : (
-							""
-						)}
+				<header className="wrapper">
+					<div className="container layout--grid">
+						<div className="grid--central group--vt-md">
+							{!!block.title ? <h1>{block.title}</h1> : ""}
+							{!!block.body ? (
+								<div className="header__body">{block.body}</div>
+							) : (
+								""
+							)}
+						</div>
 					</div>
 				</header>
 			);
@@ -96,7 +98,7 @@ export default (block) => {
 				<section className="content-grid__wrapper wrapper">
 					<div className="content-grid__container container">
 						{!!block.body || !!block.title ? (
-							<div className="content-grid__text-body">
+							<div className="grid--central group--vt-md">
 								<h1>{block.title}</h1>
 
 								{block.body}

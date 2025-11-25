@@ -111,7 +111,7 @@ export default () => {
 	return (
 		<main className="donate__wrapper wrapper">
 			<div className="donate__container container layout--grid">
-				<header className="donate__header group--vt-md">
+				<header className="grid--central group--vt-md">
 					<h1>Donate</h1>
 					<div className="group--vt-sm">
 						<p>
@@ -128,7 +128,7 @@ export default () => {
 
 				<form
 					method="POST"
-					className="donate__form form"
+					className="form grid--central"
 					onSubmit={handleSubmit}
 					aria-labelledby="donate-heading"
 					noValidate

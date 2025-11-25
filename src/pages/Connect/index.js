@@ -110,7 +110,7 @@ const Connect = () => {
 	return (
 		<main className="connect__wrapper wrapper">
 			<div className="connect__container container layout--grid">
-				<header className="connect__header group--vt-md">
+				<header className="grid--central group--vt-md">
 					<h1>Connect</h1>
 					<div className="group--vt-sm">
 						<p>We’d love to hear from you!</p>
@@ -124,7 +124,7 @@ const Connect = () => {
 
 				<form
 					method="POST"
-					className="connect__form form"
+					className="form grid--central"
 					onSubmit={handleSubmit}
 					aria-labelledby="connect-heading"
 					noValidate
