@@ -4,68 +4,6 @@ import SMSReminderModal from "../../components/SMSReminderModal";
 export default (showModal) => [
 	{
 		type: "feature",
-		title: (
-			<>
-				This Wednesday:{" "}
-				<span className="serif">Frisbee in the Park</span>
-			</>
-		),
-		body: (
-			<>
-				<p>
-					Join us in <strong>Victoria Park</strong> from{" "}
-					<strong>6pm</strong> for some casual frisbee, hanging out
-					and a chance to meet some of the VPCC community.
-				</p>
-			</>
-		),
-		buttons: [
-			{
-				label: "Get directions",
-				href: "https://maps.app.goo.gl/bbPLsXdSQeCKYkHY9",
-				target: "_blank",
-			},
-		],
-		images: [
-			{
-				src: "/assets/images/frisbee.jpg",
-				alt: "Frisbee in the park",
-			},
-		],
-		timeout: new Date("2025-09-24T18:00"),
-	},
-	// {
-	// 	type: "feature",
-	// 	title: (
-	// 		<>
-	// 			Reading Group: <span className="serif">The Reason for God</span>
-	// 		</>
-	// 	),
-	// 	body: (
-	// 		<>
-	// 			<p>
-	// 				Explore <em>The Reason for God</em> by Tim Keller in our
-	// 				reading group — a space to to think deeply about the Bible,
-	// 				science and apologetics.
-	// 			</p>
-	// 			<p>Come be with us this Monday from 7-8pm.</p>
-	// 		</>
-	// 	),
-	// 	images: [
-	// 		{
-	// 			src: "/assets/images/the-reason-for-god.jpg",
-	// 			alt: "The Reason for God",
-	// 		},
-	// 	],
-	// 	buttons: [
-	// 		{
-	// 			label: "Get in touch",
-	// 			href: "/connect",
-	// 		},
-	// 	],
-	// },
-	{
-		type: "feature",
 		title: "Calendar",
 		body: (
 			<p>
@@ -85,6 +23,36 @@ export default (showModal) => [
 				target: "_blank",
 			},
 		],
+	},
+	{
+		type: "feature",
+		title: (
+			<>
+				December 7th: <span className="serif">Community Carols</span>
+			</>
+		),
+		body: (
+			<>
+				<p>
+					Join us outdoors for Christmas carols, followed by warm
+					drinks, mince pies and time together.
+				</p>
+				<p>
+					5–6pm • Canal Club Community Centre, Sewardstone Road, E2
+					9HP
+				</p>
+
+				<p>Don’t forget to wrap up warm!</p>
+			</>
+		),
+
+		images: [
+			{
+				src: "/assets/images/carols-25.jpg",
+				alt: "Frisbee in the park",
+			},
+		],
+		timeout: new Date("2025-12-07T18:00"),
 	},
 	{
 		type: "feature",

@@ -5,33 +5,31 @@ export default (showModal) => [
 		type: "feature",
 		title: (
 			<>
-				This Wednesday:{" "}
-				<span className="serif">Frisbee in the Park</span>
+				December 7th: <span className="serif">Community Carols</span>
 			</>
 		),
 		body: (
 			<>
 				<p>
-					Join us in <strong>Victoria Park</strong> from{" "}
-					<strong>6pm</strong> for some casual frisbee, hanging out
-					and a chance to meet some of the VPCC community.
+					Join us outdoors for Christmas carols, followed by warm
+					drinks, mince pies and time together.
 				</p>
+				<p>
+					5–6pm • Canal Club Community Centre, Sewardstone Road, E2
+					9HP
+				</p>
+
+				<p>Don’t forget to wrap up warm!</p>
 			</>
 		),
-		buttons: [
-			{
-				label: "Get directions",
-				href: "https://maps.app.goo.gl/bbPLsXdSQeCKYkHY9",
-				target: "_blank",
-			},
-		],
+
 		images: [
 			{
-				src: "/assets/images/frisbee.jpg",
+				src: "/assets/images/carols-25.jpg",
 				alt: "Frisbee in the park",
 			},
 		],
-		timeout: new Date("2025-09-24T18:00"),
+		timeout: new Date("2025-12-07T18:00"),
 	},
 	{
 		type: "feature",
