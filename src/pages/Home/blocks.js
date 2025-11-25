@@ -15,10 +15,9 @@ export default (showModal) => [
 					drinks, mince pies and time together.
 				</p>
 				<p>
-					5–6pm • Canal Club Community Centre, Sewardstone Road, E2
-					9HP
+					December 7th, 5–6pm • Canal Club Community Centre,
+					Sewardstone Road, E2 9HP
 				</p>
-
 				<p>Don’t forget to wrap up warm!</p>
 			</>
 		),
