@@ -21,10 +21,10 @@ let sections = [
 	{
 		title: "Legal",
 		links: [
-			// {
-			// 	label: "Safeguarding Policy",
-			// 	href: "/assets/pdf/safeguarding-policy.pdf",
-			// },
+			{
+				label: "Safeguarding Policy",
+				href: "/assets/pdf/safeguarding-policy.pdf",
+			},
 			// {
 			// 	label: "Complaint Policy",
 			// 	href: "/assets/pdf/complaint-policy.pdf",
