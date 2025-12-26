@@ -480,6 +480,177 @@ img {
 	}
 }
 
+/* Fade-in (opacity only) for whole feature/block types */
+.feature__wrapper,
+.header__wrapper,
+.content-grid__wrapper {
+	opacity: 0;
+	transition: opacity 400ms ease;
+}
+
+.feature__wrapper.fade-in,
+.header__wrapper.fade-in,
+.content-grid__wrapper.fade-in {
+	opacity: 1;
+}
+
+/* Explicit opacity-only fades for feature image and text content (stagger handled in JS) */
+.feature__image-slideshow,
+.feature__text-content {
+	opacity: 0;
+	transition: opacity 320ms ease;
+}
+
+.feature__image-slideshow.fade-in,
+.feature__text-content.fade-in {
+	opacity: 1;
+}
+
+/* Per-item opacity for text children (JS sets transitionDelay per-child) */
+.feature__text-item > * {
+	opacity: 0;
+	transition: opacity 220ms ease;
+}
+
+.feature__text-content.fade-in .feature__text-item > *,
+.grid--central.fade-in .feature__text-item > * {
+	opacity: 1;
+}
+
+/* Opacity-only reveal for top-level text items (no clip/slide) */
+.feature__text-item {
+	overflow: visible; /* ensure descenders are visible */
+}
+
+.feature__text-item > * {
+	opacity: 0;
+	transition: opacity 220ms ease;
+	will-change: opacity;
+}
+
+.feature__text-content.fade-in .feature__text-item > *,
+.grid--central.fade-in .feature__text-item > * {
+	opacity: 1;
+}
+
+/* Stagger a few children with increasing delays (fallbacks; JS sets inline delays too) */
+.feature__text-content.fade-in .feature__text-item:nth-child(1),
+.grid--central.fade-in .feature__text-item:nth-child(1),
+.feature__text-content.fade-in .feature__text-item:nth-child(1) > *,
+.grid--central.fade-in .feature__text-item:nth-child(1) > * {
+	transition-delay: 0ms;
+}
+.feature__text-content.fade-in .feature__text-item:nth-child(2),
+.grid--central.fade-in .feature__text-item:nth-child(2),
+.feature__text-content.fade-in .feature__text-item:nth-child(2) > *,
+.grid--central.fade-in .feature__text-item:nth-child(2) > * {
+	transition-delay: 80ms;
+}
+.feature__text-content.fade-in .feature__text-item:nth-child(3),
+.grid--central.fade-in .feature__text-item:nth-child(3),
+.feature__text-content.fade-in .feature__text-item:nth-child(3) > *,
+.grid--central.fade-in .feature__text-item:nth-child(3) > * {
+	transition-delay: 160ms;
+}
+.feature__text-content.fade-in .feature__text-item:nth-child(4),
+.grid--central.fade-in .feature__text-item:nth-child(4),
+.feature__text-content.fade-in .feature__text-item:nth-child(4) > *,
+.grid--central.fade-in .feature__text-item:nth-child(4) > * {
+	transition-delay: 240ms;
+}
+.feature__text-content.fade-in .feature__text-item:nth-child(5),
+.grid--central.fade-in .feature__text-item:nth-child(5),
+.feature__text-content.fade-in .feature__text-item:nth-child(5) > *,
+.grid--central.fade-in .feature__text-item:nth-child(5) > * {
+	transition-delay: 320ms;
+}
+.feature__text-content.fade-in .feature__text-item:nth-child(6),
+.grid--central.fade-in .feature__text-item:nth-child(6),
+.feature__text-content.fade-in .feature__text-item:nth-child(6) > *,
+.grid--central.fade-in .feature__text-item:nth-child(6) > * {
+	transition-delay: 400ms;
+}
+.feature__text-content.fade-in .feature__text-item:nth-child(7),
+.grid--central.fade-in .feature__text-item:nth-child(7),
+.feature__text-content.fade-in .feature__text-item:nth-child(7) > *,
+.grid--central.fade-in .feature__text-item:nth-child(7) > * {
+	transition-delay: 480ms;
+}
+.feature__text-content.fade-in .feature__text-item:nth-child(8),
+.grid--central.fade-in .feature__text-item:nth-child(8),
+.feature__text-content.fade-in .feature__text-item:nth-child(8) > *,
+.grid--central.fade-in .feature__text-item:nth-child(8) > * {
+	transition-delay: 560ms;
+}
+
+/* Content grid cells fade via opacity only */
+.content-grid__cell {
+	overflow: visible;
+}
+
+.content-grid__cell > * {
+	opacity: 0;
+	transition: opacity 220ms ease;
+	will-change: opacity;
+}
+
+.content-grid__cells.fade-in .content-grid__cell > * {
+	opacity: 1;
+	opacity: 1;
+}
+
+/* Content grid item reveal stagger */
+.content-grid__cells.fade-in .content-grid__cell:nth-child(1),
+.content-grid__cells.fade-in .content-grid__cell:nth-child(1) > * {
+	transition-delay: 0ms;
+}
+.content-grid__cells.fade-in .content-grid__cell:nth-child(2),
+.content-grid__cells.fade-in .content-grid__cell:nth-child(2) > * {
+	transition-delay: 80ms;
+}
+.content-grid__cells.fade-in .content-grid__cell:nth-child(3),
+.content-grid__cells.fade-in .content-grid__cell:nth-child(3) > * {
+	transition-delay: 160ms;
+}
+.content-grid__cells.fade-in .content-grid__cell:nth-child(4),
+.content-grid__cells.fade-in .content-grid__cell:nth-child(4) > * {
+	transition-delay: 240ms;
+}
+.content-grid__cells.fade-in .content-grid__cell:nth-child(5),
+.content-grid__cells.fade-in .content-grid__cell:nth-child(5) > * {
+	transition-delay: 320ms;
+}
+.content-grid__cells.fade-in .content-grid__cell:nth-child(6),
+.content-grid__cells.fade-in .content-grid__cell:nth-child(6) > * {
+	transition-delay: 400ms;
+}
+.content-grid__cells.fade-in .content-grid__cell:nth-child(7),
+.content-grid__cells.fade-in .content-grid__cell:nth-child(7) > * {
+	transition-delay: 480ms;
+}
+.content-grid__cells.fade-in .content-grid__cell:nth-child(8),
+.content-grid__cells.fade-in .content-grid__cell:nth-child(8) > * {
+	transition-delay: 560ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.feature__wrapper,
+	.header__wrapper,
+	.content-grid__wrapper {
+		opacity: 1 !important;
+		transition: none !important;
+	}
+	.feature__text-item,
+	.feature__text-item > *,
+	.content-grid__cell,
+	.content-grid__cell > * {
+		transition: none !important;
+		clip-path: inset(0 0 0 0) !important;
+		-webkit-clip-path: inset(0 0 0 0) !important;
+		transform: none !important;
+	}
+}
+
 .feature__body {
 	display: flex;
 	flex-direction: column;
