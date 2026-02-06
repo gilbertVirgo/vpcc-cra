@@ -89,7 +89,7 @@ const Connect = () => {
 							"Content-Type": "application/json",
 						},
 						body: JSON.stringify({ token, formData }),
-					}
+					},
 				);
 
 				const result = await response.json();
@@ -234,15 +234,8 @@ const Connect = () => {
 						Send
 					</Button>
 					<p className="subtext">
-						This site is protected by reCAPTCHA and the Google{" "}
-						<a href="https://policies.google.com/privacy">
-							Privacy Policy
-						</a>{" "}
-						and{" "}
-						<a href="https://policies.google.com/terms">
-							Terms of Service
-						</a>{" "}
-						apply.
+						This site is protected by Google&apos;s reCAPTCHA
+						service
 					</p>
 				</form>
 			</div>
