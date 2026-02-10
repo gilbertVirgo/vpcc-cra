@@ -6,6 +6,7 @@ import WhatsOn from "./pages/WhatsOn";
 import About from "./pages/About";
 import Beliefs from "./pages/Beliefs";
 import Connect from "./pages/Connect";
+import Donate from "./pages/Donate";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
 
@@ -30,6 +31,7 @@ function App() {
 					<Route path="/about" element={<About />} />
 					<Route path="/beliefs" element={<Beliefs />} />
 					<Route path="/connect" element={<Connect />} />
+					<Route path="/donate" element={<Donate />} />
 				</Routes>
 			</main>
 			<Footer />

@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 let links = [
 	{ name: "Home", href: "/" },
@@ -49,6 +50,11 @@ export default () => {
 							</a>
 						</li>
 					))}
+					<li>
+						<Button style={{ columnGap: "1rem" }} href="/donate">
+							Donate
+						</Button>
+					</li>
 				</ul>
 			</div>
 		</nav>

@@ -4,65 +4,56 @@ import SMSReminderModal from "../../components/SMSReminderModal";
 export default (showModal) => [
 	{
 		type: "feature",
-		title: (
-			<>
-				This Summer: <span className="serif">Community Games</span>
-			</>
-		),
+		title: "Calendar",
 		body: (
-			<>
-				<p>
-					Join us this Wednesday from 6:30-8pm for fun, games and
-					snacks on the Wellington estate.
-				</p>
-			</>
+			<p>
+				See all our upcoming events and activities on our calendar page.
+			</p>
 		),
+		images: [
+			{
+				src: "/assets/images/calendar.jpg",
+				alt: "Calendar",
+			},
+		],
 		buttons: [
 			{
-				label: "Get directions",
-				href: "https://maps.app.goo.gl/BCFDzM1KamRXjLUWA",
+				label: "View calendar",
+				href: "https://calendar.vpcc.church",
 				target: "_blank",
 			},
 		],
-		images: [
-			{
-				src: "/assets/images/community-games.jpg",
-				alt: "Community games",
-			},
-		],
-		timeout: new Date("2025-08-27T20:00"),
 	},
 	{
 		type: "feature",
 		title: (
 			<>
-				Reading Group: <span className="serif">The Reason for God</span>
+				December 7th: <span className="serif">Community Carols</span>
 			</>
 		),
 		body: (
 			<>
 				<p>
-					Explore <em>The Reason for God</em> by Tim Keller in our
-					reading group — a space to to think deeply about the Bible,
-					science and apologetics.
+					Join us outdoors for Christmas carols, followed by warm
+					drinks, mince pies and time together.
 				</p>
-				<p>Come be with us this Monday from 7-8pm.</p>
+				<p>
+					December 7th, 5–6pm • Canal Club Community Centre,
+					Sewardstone Road, E2 9HP
+				</p>
+
+				<p>Don’t forget to wrap up warm!</p>
 			</>
 		),
+
 		images: [
 			{
-				src: "/assets/images/the-reason-for-god.jpg",
-				alt: "The Reason for God",
+				src: "/assets/images/carols-25.jpg",
+				alt: "Frisbee in the park",
 			},
 		],
-		buttons: [
-			{
-				label: "Get in touch",
-				href: "/connect",
-			},
-		],
+		timeout: new Date("2025-12-07T18:00"),
 	},
-
 	{
 		type: "feature",
 		title: "Prayer meetings",
@@ -89,15 +80,26 @@ export default (showModal) => [
 		type: "feature",
 		title: "Sundays",
 		body: (
-			<p>
-				We meet from 3:00pm-4:30pm at Victoria Park Baptist Church, 186
-				Grove Road, London E3 5TG.
-			</p>
+			<>
+				{/* <p>
+					This week, we&rsquo;re meeting at Ben &amp; Rachel&rsquo;s
+					home in Bethnal Green.
+				</p>
+				<p>
+					Do get in touch and we&rsquo;d be delighted to share the
+					address.
+				</p> */}
+				<p>
+					We meet from 3:00pm-4:30pm at Victoria Park Baptist Church,
+					186 Grove Road, London E3 5TG.
+				</p>
+			</>
 		),
 		buttons: [
 			{
 				label: "Get directions",
 				href: "https://maps.app.goo.gl/CQFsTYqZfuUAEvuP7",
+				target: "_blank",
 			},
 			// {
 			// 	label: "Send me a reminder text",
@@ -105,6 +107,14 @@ export default (showModal) => [
 			// },
 		],
 		images: [
+			{
+				src: "/assets/images/sundays-1_filtered.jpeg",
+				alt: "A VPCC Sunday Service",
+			},
+			{
+				src: "/assets/images/baby-1--filtered.jpg",
+				alt: "A VPCC Sunday Service",
+			},
 			{
 				src: "/assets/images/sundays-4_filtered.jpeg",
 				alt: "A VPCC Sunday Service",

@@ -5,31 +5,30 @@ export default (showModal) => [
 		type: "feature",
 		title: (
 			<>
-				This Summer: <span className="serif">Community Games</span>
+				December 7th: <span className="serif">Community Carols</span>
 			</>
 		),
 		body: (
 			<>
 				<p>
-					Join us this Wednesday from 6:30-8pm for fun, games and
-					snacks on the Wellington estate.
+					Join us outdoors for Christmas carols, followed by warm
+					drinks, mince pies and time together.
 				</p>
+				<p>
+					December 7th, 5–6pm • Canal Club Community Centre,
+					Sewardstone Road, E2 9HP
+				</p>
+				<p>Don’t forget to wrap up warm!</p>
 			</>
 		),
-		buttons: [
-			{
-				label: "Get directions",
-				href: "https://maps.app.goo.gl/BCFDzM1KamRXjLUWA",
-				target: "_blank",
-			},
-		],
+
 		images: [
 			{
-				src: "/assets/images/community-games.jpg",
-				alt: "Community games",
+				src: "/assets/images/carols-25.jpg",
+				alt: "Frisbee in the park",
 			},
 		],
-		timeout: new Date("2025-08-27T20:00"),
+		timeout: new Date("2025-12-07T18:00"),
 	},
 	{
 		type: "feature",
@@ -37,6 +36,14 @@ export default (showModal) => [
 		body: (
 			<>
 				<p>We are Victoria Park Community Church.</p>
+				{/* <p>
+					This week, we're meeting at Ben &amp; Rachel&rsquo;s home in
+					Bethnal Green.
+				</p>
+				<p>
+					Do get in touch and we&rsquo;d be delighted to share the
+					address.
+				</p> */}
 				<p>
 					We meet from 3:00pm-4:30pm at Victoria Park Baptist Church,
 					186 Grove Road, London E3 5TG.
@@ -44,6 +51,7 @@ export default (showModal) => [
 			</>
 		),
 		buttons: [
+			// { label: "Get in touch", href: "/connect" },
 			{
 				label: "Get directions",
 				href: "https://maps.app.goo.gl/CQFsTYqZfuUAEvuP7",
@@ -57,6 +65,10 @@ export default (showModal) => [
 		images: [
 			{
 				src: "/assets/images/sundays-1_filtered.jpeg",
+				alt: "A VPCC Sunday Service",
+			},
+			{
+				src: "/assets/images/baby-1--filtered.jpg",
 				alt: "A VPCC Sunday Service",
 			},
 			{
@@ -77,7 +89,7 @@ export default (showModal) => [
 		buttons: [{ label: "Find out what’s on", href: "/whats-on" }],
 		images: [
 			{
-				src: "/assets/images/general--2.jpg",
+				src: "/assets/images/calendar.jpg",
 				alt: "VPCC members enjoying lunch together",
 			},
 		],
@@ -132,7 +144,7 @@ export default (showModal) => [
 		buttons: [{ label: "Send us an email", href: "/connect" }],
 		images: [
 			{
-				src: "/assets/images/connect_filtered.jpeg",
+				src: "/assets/images/general--2.jpg",
 				alt: "",
 			},
 		],
