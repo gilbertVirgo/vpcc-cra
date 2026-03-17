@@ -892,7 +892,8 @@ img {
 .page__about,
 .page__beliefs,
 .page__connect,
-.page__donate {
+.page__donate,
+.page__esol {
 	gap: $spacing--xl;
 
 	@include media(null, sm) {
