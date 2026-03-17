@@ -29,8 +29,7 @@ export default [
 							<strong>Taster session:</strong> Friday 17th April
 						</li>
 						<li>
-							<strong>Length:</strong> 8 weeks (with a break for
-							Easter)
+							<strong>Length:</strong> 8 weeks
 						</li>
 						<li>
 							<strong>Cost:</strong> Free
