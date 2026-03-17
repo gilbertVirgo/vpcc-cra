@@ -11,6 +11,7 @@ import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
 
 import { useLocation } from "react-router-dom";
+import ESOL from "./pages/ESOL";
 
 function App() {
 	let location = useLocation();
@@ -32,6 +33,8 @@ function App() {
 					<Route path="/beliefs" element={<Beliefs />} />
 					<Route path="/connect" element={<Connect />} />
 					<Route path="/donate" element={<Donate />} />
+
+					<Route path="/esol" element={<ESOL />} />
 				</Routes>
 			</main>
 			<Footer />
