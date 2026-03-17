@@ -16,9 +16,9 @@ export default [
 					/>
 
 					<p className="px-8">
-						This course is run by Rachel, who has been leading it
-						for 4 years and has welcomed over 50 people through the
-						programme.
+						This is a brand new course run by Rachel, who has lived
+						in East London for nearly three decades and has led a
+						number of similar courses in the in recent years.
 					</p>
 
 					<ul className="flex flex-col gap-1 pr-8 pl-14 list-disc">
