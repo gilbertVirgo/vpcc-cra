@@ -44,8 +44,8 @@ const FeatureBlock = ({ block }) => {
 			timeouts.push(
 				setTimeout(
 					() => wrapperRef.current.classList.add("fade-in"),
-					base
-				)
+					base,
+				),
 			);
 		}
 
@@ -53,8 +53,8 @@ const FeatureBlock = ({ block }) => {
 			timeouts.push(
 				setTimeout(
 					() => imgRef.current.classList.add("fade-in"),
-					base + 20
-				)
+					base + 20,
+				),
 			);
 		}
 
@@ -71,7 +71,7 @@ const FeatureBlock = ({ block }) => {
 								delay;
 					});
 					textRef.current.classList.add("fade-in");
-				}, base + gap)
+				}, base + gap),
 			);
 		}
 
@@ -191,7 +191,7 @@ const HeaderBlock = ({ block }) => {
 		}
 
 		const wrappers = document.querySelectorAll(
-			".feature__wrapper, .header__wrapper, .content-grid__wrapper"
+			".feature__wrapper, .header__wrapper, .content-grid__wrapper",
 		);
 		const wrapper = wrapperRef.current;
 		const i = wrapper ? Array.from(wrappers).indexOf(wrapper) : 0;
@@ -207,7 +207,7 @@ const HeaderBlock = ({ block }) => {
 					if (wrapperRef.current)
 						wrapperRef.current.classList.add("fade-in");
 					if (!innerRef.current) return;
-				}, base)
+				}, base),
 			);
 		}
 
@@ -230,7 +230,7 @@ const HeaderBlock = ({ block }) => {
 					) {
 						wrapperRef.current.classList.add("fade-in");
 					}
-				}, base + gap)
+				}, base + gap),
 			);
 		}
 
@@ -297,7 +297,7 @@ const ContentGridBlock = ({ block }) => {
 		}
 
 		const wrappers = document.querySelectorAll(
-			".feature__wrapper, .header__wrapper, .content-grid__wrapper"
+			".feature__wrapper, .header__wrapper, .content-grid__wrapper",
 		);
 		const wrapper = wrapperRef.current;
 		const i = wrapper ? Array.from(wrappers).indexOf(wrapper) : 0;
@@ -310,8 +310,8 @@ const ContentGridBlock = ({ block }) => {
 			timeouts.push(
 				setTimeout(
 					() => wrapperRef.current.classList.add("fade-in"),
-					base
-				)
+					base,
+				),
 			);
 		}
 
@@ -328,7 +328,7 @@ const ContentGridBlock = ({ block }) => {
 								delay;
 					});
 					cellsRef.current.classList.add("fade-in");
-				}, base + gap)
+				}, base + gap),
 			);
 		}
 
@@ -387,7 +387,7 @@ const ContentGridBlock = ({ block }) => {
 										{!!cell.body ? cell.body : ""}
 									</article>
 								);
-						  })
+							})
 						: ""}
 				</div>
 			</div>
@@ -410,6 +410,10 @@ export default (block) => {
 
 		case "content-grid":
 			return <ContentGridBlock block={block} />;
+
+		case "custom":
+			return <React.Fragment>{block.body}</React.Fragment>;
+
 		default:
 			return <p>No match for block type "{block.type}"</p>;
 	}

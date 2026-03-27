@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./main.scss";
+import "./main.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { ModalProvider } from "./components/ModalContext";
@@ -14,5 +14,5 @@ root.render(
 				<App />
 			</ModalProvider>
 		</ReCaptchaProvider>
-	</BrowserRouter>
+	</BrowserRouter>,
 );
