@@ -5,30 +5,22 @@ export default (showModal) => [
 		type: "feature",
 		title: (
 			<>
-				December 7th: <span className="serif">Community Carols</span>
+				April 3rd: <span className="serif">Hot Cross Buns</span>
 			</>
 		),
 		body: (
 			<>
-				<p>
-					Join us outdoors for Christmas carols, followed by warm
-					drinks, mince pies and time together.
-				</p>
-				<p>
-					December 7th, 5–6pm • Canal Club Community Centre,
-					Sewardstone Road, E2 9HP
-				</p>
-				<p>Don’t forget to wrap up warm!</p>
+				<p>Join us for free, homemade hot cross buns.</p>
+				<p>April 3rd, 11am-2pm • 17 Lark Row, London E2 9JA</p>
 			</>
 		),
-
 		images: [
 			{
-				src: "/assets/images/carols-25.jpg",
-				alt: "Frisbee in the park",
+				src: "/assets/images/hot-cross-buns.jpg",
+				alt: "Hot Cross Buns",
 			},
 		],
-		timeout: new Date("2025-12-07T18:00"),
+		timeout: new Date("2026-04-03T14:00"),
 	},
 	{
 		type: "feature",
