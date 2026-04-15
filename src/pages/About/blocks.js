@@ -71,42 +71,42 @@ export default [
 					</p>
 				),
 			},
+			// {
+			// 	title: "Tilly",
+			// 	subtitle: "Safeguarding Lead",
+			// 	body: (
+			// 		<p>
+			// 			Tilly lives in Stratford. She currently works with a
+			// 			charity supporting vulnerable children and families.
+			// 		</p>
+			// 	),
+			// },
 			{
-				title: "Tilly",
+				title: "Isaiah Jagdeo",
 				subtitle: "Safeguarding Lead",
 				body: (
 					<p>
-						Tilly lives in Stratford. She currently works with a
-						charity supporting vulnerable children and families.
+						Isaiah is married to Beth. They live together in
+						Stratford. Isaiah works as a Mission Associate for
+						Children, Youth & Schools at{" "}
+						<a href="https://www.lcm.org.uk">London City Mission</a>
+						.
 					</p>
 				),
 			},
-			// {
-			// 	title: "Isaiah Jagdeo",
-			// 	subtitle: "Church Manager",
-			// 	body: (
-			// 		<p>
-			// 			Isaiah is married to Beth. They live together in
-			// 			Stratford. Isaiah works as a Mission Associate for
-			// 			Children, Youth & Schools at{" "}
-			// 			<a href="https://www.lcm.org.uk">London City Mission</a>
-			// 			.
-			// 		</p>
-			// 	),
-			// },
-			// {
-			// 	title: "Beth Jagdeo",
-			// 	subtitle: "Lead Kids Worker",
-			// 	body: (
-			// 		<p>
-			// 			Beth is married to Isaiah. During the week, she works
-			// 			with a medical charity.
-			// 		</p>
-			// 	),
-			// },
+			{
+				title: "Beth Jagdeo",
+				subtitle: "Lead Kids Worker",
+				body: (
+					<p>
+						Beth is married to Isaiah. During the week, she works
+						with a medical charity.
+					</p>
+				),
+			},
 			{
 				title: "Rachel",
-				subtitle: "Life Skills Coach",
+				subtitle: "Life–Skills Coach",
 				body: (
 					<p>
 						Rachel is married to Ben. Besides her role as a mother,
