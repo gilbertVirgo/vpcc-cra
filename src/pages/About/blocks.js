@@ -41,7 +41,7 @@ export default [
 		title: "Our team",
 		cells: [
 			{
-				title: "Ben",
+				title: "Ben Virgo",
 				subtitle: "Lead Pastor",
 				body: (
 					<p>
@@ -57,7 +57,7 @@ export default [
 				),
 			},
 			{
-				title: "Gil",
+				title: "Gil Virgo",
 				subtitle: "Pastor",
 				body: (
 					<p>
@@ -105,7 +105,7 @@ export default [
 				),
 			},
 			{
-				title: "Rachel",
+				title: "Rachel Virgo",
 				subtitle: "Life–Skills Coach",
 				body: (
 					<p>
