@@ -128,11 +128,12 @@ export default (showModal) => [
 			<>
 				<p>
 					Join us for a morning of food, fellowship and fun at our
-					monthly women’s breakfast.
+					women’s breakfasts.
 				</p>
 				<p>
-					All women are welcome on 10am on the last Saturday of every
-					month.
+					These gatherings happen throughout the year on an informal
+					basis. All women are warmly welcome—get in touch to find out
+					when the next one is happening.
 				</p>
 			</>
 		),
