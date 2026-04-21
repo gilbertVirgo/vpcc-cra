@@ -120,16 +120,6 @@ export default [
 			{
 				body: (
 					<p>
-						The Holy Spirit lives in all those he has regenerated.
-						He makes them increasingly Christlike in character and
-						behaviour and gives them power for their witness in the
-						world.
-					</p>
-				),
-			},
-			{
-				body: (
-					<p>
 						The Lord Jesus Christ will return in person, to judge
 						everyone, to execute God’s just condemnation on those
 						who have not repented and to receive the redeemed to
