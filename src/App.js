@@ -1,17 +1,17 @@
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-// Import page components
-import Home from "./pages/Home";
-import WhatsOn from "./pages/WhatsOn";
 import About from "./pages/About";
+import ArtCourse from "./pages/ArtCourse";
 import Beliefs from "./pages/Beliefs";
 import Connect from "./pages/Connect";
 import Donate from "./pages/Donate";
-import NavigationBar from "./components/NavigationBar";
-import Footer from "./components/Footer";
-
-import { useLocation } from "react-router-dom";
 import ESOL from "./pages/ESOL";
+import Footer from "./components/Footer";
+// Import page components
+import Home from "./pages/Home";
+import NavigationBar from "./components/NavigationBar";
+import WhatsOn from "./pages/WhatsOn";
+import { useLocation } from "react-router-dom";
 
 function App() {
 	let location = useLocation();
@@ -35,6 +35,7 @@ function App() {
 					<Route path="/donate" element={<Donate />} />
 
 					<Route path="/esol" element={<ESOL />} />
+					<Route path="/art-course" element={<ArtCourse />} />
 				</Routes>
 			</main>
 			<Footer />
