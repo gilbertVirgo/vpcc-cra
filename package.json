@@ -8,6 +8,7 @@
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^13.2.1",
     "gmail-send": "^1.8.14",
+    "googleapis": "^171.4.0",
     "node-fetch": "^3.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -15,6 +16,7 @@
     "react-scripts": "5.0.1",
     "recaptcha-v3": "^1.11.3",
     "sass": "^1.86.0",
+    "stripe": "^22.1.1",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
