@@ -4,14 +4,26 @@ export default ({
 	onClick = () => {},
 	href,
 	type,
+	className,
 	...props
-}) =>
-	href ? (
+}) => {
+	const handleAnchorClick = (e) => {
+		if (href && href.startsWith("#")) {
+			e.preventDefault();
+			const element = document.getElementById(href.slice(1));
+			if (element) {
+				element.scrollIntoView({ behavior: "smooth" });
+			}
+		}
+		onClick(e);
+	};
+
+	return href ? (
 		<a
-			className="button__wrapper"
+			className={`button__wrapper ${className}`}
 			href={href}
 			target={target}
-			onClick={onClick}
+			onClick={handleAnchorClick}
 			{...props}
 		>
 			{children}
@@ -19,7 +31,7 @@ export default ({
 		</a>
 	) : (
 		<button
-			className="button__wrapper"
+			className={`button__wrapper ${className}`}
 			type={type || "button"}
 			onClick={onClick}
 			{...props}
@@ -28,3 +40,4 @@ export default ({
 			<span style={{ display: "block" }}>→</span>
 		</button>
 	);
+};
