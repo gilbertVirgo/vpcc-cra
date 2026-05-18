@@ -24,7 +24,9 @@ const ArtCourse = () => {
 					</p>
 
 					<div className="flex flex-col md:flex-row gap-3">
-						<Button href="/art-course/signup">Sign up</Button>
+						<Button href="https://docs.google.com/forms/d/e/1FAIpQLSc-A8GdHP5dOP5BxbSJxcvNvV9QRkjTgZ_bZOet9Dp2RrZPog/viewform?usp=publish-editor">
+							Sign up
+						</Button>
 						<Button href="#details">Course details</Button>
 					</div>
 				</div>
@@ -78,7 +80,7 @@ const ArtCourse = () => {
 						</p>
 					</div>
 
-					<Button href="/art-course/signup">
+					<Button href="https://docs.google.com/forms/d/e/1FAIpQLSc-A8GdHP5dOP5BxbSJxcvNvV9QRkjTgZ_bZOet9Dp2RrZPog/viewform?usp=publish-editor">
 						Go to sign-up form
 					</Button>
 				</div>
