@@ -50,7 +50,37 @@ const ArtCourse = () => {
 						<li>
 							<strong>Level:</strong> Beginners welcome
 						</li>
+
+						<li>
+							<strong>Time:</strong> 6–9pm
+						</li>
+
+						<li>
+							<strong>Venue:</strong> St Benet&apos;s Chaplaincy
+						</li>
 					</ul>
+				</div>
+
+				<div className="flex flex-col gap-3 ">
+					<h3 className="px-8">Venue</h3>
+					<p className="px-8">
+						St Benet&apos;s Chaplaincy, <br />
+						327A Mile End Rd, <br />
+						Bethnal Green, <br />
+						London E1 4NT
+					</p>
+					<div className="w-full" style={{ aspectRatio: "16 / 9" }}>
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.449433734096!2d-0.042210422203681056!3d51.523316071816915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d2f2110caf1%3A0xcd5c1cac416a4a23!2sSt%20Benet&#39;s%20Chaplaincy%20QMUL!5e0!3m2!1sen!2suk!4v1779185490795!5m2!1sen!2suk"
+							width="100%"
+							height="100%"
+							style={{ border: 0 }}
+							allowFullScreen=""
+							loading="lazy"
+							referrerPolicy="no-referrer-when-downgrade"
+							title="St Benet's Chaplaincy map"
+						></iframe>
+					</div>
 				</div>
 
 				<div className="flex flex-col gap-3 px-8">
