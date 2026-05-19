@@ -40,7 +40,7 @@ const ArtCourse = () => {
 						</li>
 
 						<li>
-							<strong>Cost:</strong> £10/week (£5 students)
+							<strong>Cost:</strong> £7.50/week (£5 students)
 						</li>
 
 						<li>
