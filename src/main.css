@@ -169,6 +169,7 @@ footer__section__links {
 	.page__home,
 	.page__whats-on {
 		row-gap: 0;
+		padding: 0;
 	}
 }
 
@@ -1057,5 +1058,3 @@ legend {
 	outline: 2px solid hsl(28, 100%, 45%);
 	outline-offset: 2px;
 }
-
-/*# sourceMappingURL=main.css.map */
