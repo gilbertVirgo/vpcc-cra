@@ -940,6 +940,11 @@ legend {
 }
 
 .button__wrapper {
+	&.shrink {
+		width: fit-content;
+		@apply gap-2;
+	}
+
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;

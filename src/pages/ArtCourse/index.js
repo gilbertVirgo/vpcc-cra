@@ -17,17 +17,27 @@ const ArtCourse = () => {
 					alt="Drawing and Painting Course"
 				/>
 
-				<div className="px-8 flex flex-col gap-3">
-					<p>
-						A relaxed 7-week course exploring observational drawing,
-						painting, colour, composition, and creative expression.
-					</p>
+				<div className="px-8 flex flex-col gap-4">
+					<div className="flex flex-col gap-2">
+						<p>
+							A relaxed 7-week course exploring observational
+							drawing, painting, colour, composition, and creative
+							expression.
+						</p>
+						<p>
+							The course will be followed by an exhibition where
+							course attendees can show off their work and
+							celebrate their creative journey together.
+						</p>
+					</div>
 
 					<div className="flex flex-col md:flex-row gap-3">
-						<Button href="https://docs.google.com/forms/d/e/1FAIpQLSc-A8GdHP5dOP5BxbSJxcvNvV9QRkjTgZ_bZOet9Dp2RrZPog/viewform?usp=publish-editor">
+						<Button
+							className="shrink"
+							href="https://docs.google.com/forms/d/e/1FAIpQLSc-A8GdHP5dOP5BxbSJxcvNvV9QRkjTgZ_bZOet9Dp2RrZPog/viewform?usp=publish-editor"
+						>
 							Sign up
 						</Button>
-						<Button href="#details">Course details</Button>
 					</div>
 				</div>
 
@@ -44,7 +54,8 @@ const ArtCourse = () => {
 						</li>
 
 						<li>
-							<strong>Included:</strong> Meals provided each week
+							<strong>Included:</strong> Materials and meals
+							provided each week
 						</li>
 
 						<li>
@@ -110,7 +121,10 @@ const ArtCourse = () => {
 						</p>
 					</div>
 
-					<Button href="https://docs.google.com/forms/d/e/1FAIpQLSc-A8GdHP5dOP5BxbSJxcvNvV9QRkjTgZ_bZOet9Dp2RrZPog/viewform?usp=publish-editor">
+					<Button
+						className="shrink"
+						href="https://docs.google.com/forms/d/e/1FAIpQLSc-A8GdHP5dOP5BxbSJxcvNvV9QRkjTgZ_bZOet9Dp2RrZPog/viewform?usp=publish-editor"
+					>
 						Go to sign-up form
 					</Button>
 				</div>
