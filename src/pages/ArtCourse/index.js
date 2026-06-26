@@ -45,7 +45,8 @@ const ArtCourse = () => {
 					<h3>Details</h3>
 
 					<ul className="flex flex-col gap-1 pl-6 list-disc">
-						<li>
+						<li>Tuesdays, starting 2nd June</li>
+								<li>
 							<strong>Length:</strong> 7 weeks
 						</li>
 
