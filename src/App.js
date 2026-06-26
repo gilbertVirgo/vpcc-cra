@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import About from "./pages/About";
 import ArtCourse from "./pages/ArtCourse";
+import ExhibitionInvite from "./pages/ExhibitionInvite";
 import Beliefs from "./pages/Beliefs";
 import Connect from "./pages/Connect";
 import Donate from "./pages/Donate";
@@ -36,6 +37,10 @@ function App() {
 
 					<Route path="/esol" element={<ESOL />} />
 					<Route path="/art-course" element={<ArtCourse />} />
+					<Route
+						path="/art-course-exhibition"
+						element={<ExhibitionInvite />}
+					/>
 				</Routes>
 			</main>
 			<Footer />
